@@ -1,0 +1,21 @@
+{namespace cmis=Tx_AtolCmisList_ViewHelpers_Default}
+<div id="tx-atolcmis-more" style="display:none" >
+  <h3>
+    <cmis:icon obj="{obj}" />
+    
+    <span class="cmis-title">
+        <cmis:properties obj="{obj}" propertyName="cmis:name"/>
+    </span>
+  </h3>
+
+    <span class="cmis-attributes">
+      <f:translate key="list.popup.author" />
+      <strong><cmis:properties obj="{obj}" propertyName="cmis:createdBy"/></strong>
+    </span>
+    <span class="cmis-attributes">
+      <f:translate key="list.popup.cdate" />
+      <strong><cmis:date obj="{obj}" format="d-m-Y"/></strong>
+    </span>
+</div>
+<!--div id="tx-atolcmis-more-background"></div-->
+<!-- Style it to cover the background when the window pop -->

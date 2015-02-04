@@ -1,0 +1,186 @@
+{namespace cmis=Tx_AtolCmisList_ViewHelpers_Default}
+{namespace alf=Tx_AtolCmisList_ViewHelpers_Alfresco}
+{namespace v=Tx_Vhs_ViewHelpers}
+ <!-- inizio cmis -->
+<f:for each="{objs}" as="obj">
+<f:if condition="{obj.type}">
+<f:then> <!--File-->
+		<h6>
+		
+		<!--questo e' il vecchio form-->
+			<!--<f:link.action action="show" arguments="{oID : obj.id}">
+			  <f:if condition="{icons}">
+				<alf:icon obj="{obj}"/>
+			  </f:if>
+			 <alf:title obj="{obj}" />
+			 </f:link.action>-->
+			 
+		<!--questo e' il nuovo form probabilmente il sID e' il CMIS repository che nel nostro caso e' 3 nome typo3 non so come prenderlo direttamente quindi ho messo 3-->	 
+			  <f:if condition="{icons}">
+				<alf:icon obj="{obj}"/>
+			  </f:if>
+			 <a href="?eID=tx_atolcmislist_download&amp;oID={obj.id}&amp;sID=3" target="_blank">
+			 <alf:title obj="{obj}" />
+			 </a>
+		</h6>
+		<f:if condition="<alf:description obj='{obj}' />!=''">
+		<f:then>
+		<small> <alf:description obj="{obj}" /></small>
+		</f:then>
+		</f:if>	
+
+			 
+		</f:then>
+<f:else><!--Directory-->
+	
+	<!--non ho saputo far di meglio di aggiungere 3 div
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='lastFolder' />=='1'">
+					<f:then>
+			<f:if condition="<cmis:properties obj='{obj}' propertyName='ultimo' />=='1'">
+		<f:then>		 
+			<f:if condition="<cmis:properties obj='{obj}' propertyName='capo' />=='0'">
+		<f:then>	
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='figli' />!='0'">
+		<f:then>
+				<div>
+				<div>	 
+				<div>
+							</f:then>
+		</f:if>
+			</f:then>
+		</f:if>
+					</f:then>
+		</f:if>
+					</f:then>
+		</f:if>
+	-->
+				
+			 <div class="accordion accordion-alfresco" id="acc<cmis:properties obj='{obj}' propertyName='ooid'/><cmis:properties obj='{obj}' propertyName='cap'/><cmis:properties obj='{obj}' propertyName='capo'/>">
+			  <div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#acc<cmis:properties obj='{obj}' propertyName='ooid'/><cmis:properties obj='{obj}' propertyName='cap'/><cmis:properties obj='{obj}' propertyName='capo'/>" href=#<cmis:properties obj='{obj}' propertyName='ooid'/><cmis:properties obj='{obj}' propertyName='cap'/><cmis:properties obj='{obj}' propertyName='capo'/>>
+					<strong>
+					 <alf:title obj="{obj}"/>
+					</strong>
+					<!--per data di scadenza -->
+					<f:if condition="{v:var.typoscript(path: 'lib.alfresco.aspect')}">
+						  <f:then><small>
+							(Apertura: <f:format.date format="%d %B %Y %H:%M"><alf:aspect obj="{obj}" aspectName="cm:from"/></f:format.date> - 
+							Scadenza: <f:format.date format="%d %B %Y %H:%M"><alf:aspect obj="{obj}" aspectName="cm:to"/></f:format.date>)
+							</small>
+						  </f:then>
+						</f:if>
+	
+					
+					
+					</a>
+				</div>
+			</div>	
+
+			   <div id=<cmis:properties obj='{obj}' propertyName='ooid'/><cmis:properties obj='{obj}' propertyName='cap'/><cmis:properties obj='{obj}' propertyName='capo'/> class="collapse accordion-body">
+			   <div class="accordion-inner">
+			  <f:if condition="<alf:description obj='{obj}' />!=''">
+			<f:then>
+			<p class="code"><alf:description obj="{obj}"/></p>
+				
+			
+			</f:then>
+			</f:if>	 
+	  <!--    figli: <cmis:properties obj='{obj}' propertyName='figli' />; 
+				ultimo: <cmis:properties obj='{obj}' propertyName='ultimo' />;
+				cap: <cmis:properties obj='{obj}' propertyName='cap' /> ;
+				capo: <cmis:properties obj='{obj}' propertyName='capo' />; 
+				bu: <cmis:properties obj='{obj}' propertyName='babboultimo' />;  
+				lf: <cmis:properties obj='{obj}' propertyName='lastFolder' />;-->
+			<blockquote>
+				
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='figli' />=='0'">
+		<f:then>		 
+					  
+					<!--  folder senza figli e' vuota devo chiudere-->
+						
+
+					</blockquote>
+					</div>
+					</div>	 
+					</div>
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='ultimo' />=='1'">
+		<f:then>		 
+			<f:if condition="<cmis:properties obj='{obj}' propertyName='capo' />!='0'">
+		<f:then>		  
+					<!--  folder senza figli ed e' ultimo vuota devo chiudere??-->
+						
+
+					</blockquote>
+					</div>
+					</div>	 
+					</div>
+			</f:then>
+		</f:if>	
+	
+	<v:iterator.loop count="<cmis:properties obj='{obj}' propertyName='babboultimo' />">
+	
+	<!--  folder senza figli ed e' ultimo vuota devo chiudere per tutti i sui parenti-->
+	
+				</blockquote>
+				 </div>
+				</div>	 
+				</div>
+</v:iterator.loop>
+											
+		</f:then>
+		</f:if>										
+		</f:then>
+		</f:if>	
+		
+
+
+
+</f:else>
+</f:if> 
+
+
+<f:if condition="<cmis:properties obj='{obj}' propertyName='ultimo' /> == '1'">
+<f:then>
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='figli' />==''">
+		<f:then>	
+		<f:if condition="<cmis:properties obj='{obj}' propertyName='figli' />!='0'">
+		<f:then>
+				
+				<!--  ultimo -->
+				            
+	  <!-- 				pippo
+				figli: <cmis:properties obj='{obj}' propertyName='figli' />; 
+				ultimo: <cmis:properties obj='{obj}' propertyName='ultimo' />;
+				cap: <cmis:properties obj='{obj}' propertyName='cap' /> ;
+				capo: <cmis:properties obj='{obj}' propertyName='capo' />; 
+				bu: <cmis:properties obj='{obj}' propertyName='babboultimo' />; -->
+				</blockquote>
+				 </div>
+				</div>	 
+				</div>
+	
+			<f:if condition="<cmis:properties obj='{obj}' propertyName='capo' />!='0'">
+		<f:then>		
+			<!--  babbo ultimo ultimo -->	
+		<v:iterator.loop count="<cmis:properties obj='{obj}' propertyName='babboultimo' />">
+			</blockquote>
+				 </div>
+				</div>	 
+				</div>
+	    </v:iterator.loop>
+			</f:then>
+		</f:if>	
+				
+				
+		</f:then>
+		</f:if>	
+		</f:then>
+		</f:if>	
+</f:then>
+</f:if>	
+ </f:for>
+ <!-- fine cmis -->
+
+
+

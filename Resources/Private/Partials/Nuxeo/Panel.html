@@ -1,0 +1,30 @@
+{namespace nx=Tx_AtolCmisList_ViewHelpers_Nuxeo}
+{namespace cmis=Tx_AtolCmisList_ViewHelpers_Default}
+<div class="tx-atolcmis-list-res">
+  <h2>
+
+    <f:link.action action="show" arguments="{oID : obj.id}">
+      <f:if condition="{icons}">
+        <cmis:rendition obj="{obj}" rk="cmis:thumbnail"/>
+      </f:if>
+      <span class="cmis-title">
+        <cmis:properties obj="{obj}" propertyName="dc:title"/>
+      </span>
+    </f:link.action>
+  </h2>
+
+  <f:if condition="{type} != 1"> 
+    <f:then>
+      <div class="tx-atolcmis-list-info-wrapper">  
+      
+        <f:if condition="{type} == 0">
+          <f:then>
+            <nx:thumbnail obj="{obj}"/>  
+          </f:then>
+        </f:if>
+        <nx:description obj="{obj}" />
+         
+      </div>
+    </f:then>
+  </f:if>
+</div>

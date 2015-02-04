@@ -1,0 +1,14 @@
+page {    
+    includeCSS{    
+      tx_atolcmislist_css = EXT:atol_cmis_list/Resources/Public/AtolCmis.css    
+    }
+   
+    includeJS{
+      tx_atolcmislist_script =  EXT:atol_cmis_list/Resources/Public/JavaScript/script.js
+    }
+}
+
+page.includeJSlibs {
+  jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
+  jquery.external = 1  
+}

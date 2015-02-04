@@ -1,0 +1,43 @@
+{namespace cmis=Tx_AtolCmisList_ViewHelpers_Default}
+{namespace alf=Tx_AtolCmisList_ViewHelpers_Alfresco}
+<div class="tx-atolcmis-list-show-wrapper">
+  <div id="link-retour">
+    <f:link.action action="list"> 
+      &lt;- Torna alla Lista 
+    </f:link.action>
+  </div>
+  <div class="tx-atolcmis-list-show">
+    
+    <h1><alf:title obj="{obj}"/></h1>
+    <!--ViewHelper-->
+    <div class="info-wrapper">
+      <div id="tx-atolcmis-view" style="float:left">
+        <alf:visu obj="{obj}" />
+      </div>
+      
+      <div class="well well-small" style="display:block">
+        <div><span class="label label-info">Nome : </span><span class="value"><cmis:properties propertyName="cmis:name" obj="{obj}"/></span></div>
+        <div><span class="label label-info">Titolo : </span><span class="value"><alf:title obj="{obj}"/></span></div>
+        <div><span class="label label-info">Descrizione : </span><span class="value"><alf:description obj="{obj}"/></span></div>
+           <div><span class="label label-info">Dimensione : </span><span class="value"><cmis:size type="opt" obj="{obj}"/></span></div>
+             <div><span class="label label-info">Creato il : </span><span class="value"><cmis:date obj="{obj}" format="d/m/Y" /></span></div>
+               <div><span class="label label-info">Modificato il : </span><span class="value"><cmis:date obj="{obj}" format="d/m/Y" type="modification"/></span></div>
+        
+        <div>
+          <span class="label label-info"> Sommario : </span><span class="value"><alf:aspect obj="{obj}" aspectName="cm:summary"/></span>
+        </div>
+      </div>
+      <div class="download">
+        <a href="?eID=tx_atolcmislist_download&oID={obj.id}&sID={sID}" target="_blank">
+          <span class="btn">
+            Scarica il file
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <f:render partial="Alfresco/Popup" arguments="{obj:obj}" />
+</div>
+
+
+
