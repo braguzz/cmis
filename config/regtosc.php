@@ -46,7 +46,7 @@ return [ 'regtoscConf'=> [
 
               //              'menuLogout' => [ ], Definito in element/navbar.php
 
-                //fine menu
+              //fine menu
 
             'arpaAuthenticator' => [
                     'myClientID' => 'rt-ac20-c1',
