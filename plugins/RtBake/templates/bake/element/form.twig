@@ -1,0 +1,104 @@
+
+<div class="card bg-light">
+<div class="{{ pluralVar }} form content card-body">
+    <?= $this->Form->create(${{ singularVar }}) ?>
+    
+    <?php
+    if (($return['returncontroller'])<>'')
+     {    echo $this->Form->hidden('returncontroller', array('hiddenField' => true, 'value'=> $return['returncontroller']));
+          echo $this->Form->hidden('returnsaveme', array('hiddenField' => true, 'value'=> 1));
+          echo $this->Form->hidden('returnaction', array('hiddenField' => true, 'value'=> $return['returnaction']));
+          echo $this->Form->hidden('returncontrollerid', array('hiddenField' => true, 'value'=> $return['returncontrollerid']));
+           }
+    ?>
+    <fieldset>
+        <?php
+{% for field in fields %}  
+{%- if field not in primaryKey %}
+    {%- if keyFields[field] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}  
+        {%- set required= 'required' %}
+        {%- if fieldData.null %}
+        {%- set required= '' %}
+        {%- endif %}
+          //  echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}, 'empty' => true]);
+            {% set plurFieldCapitalize=keyFields[field]|capitalize %}
+            {% set  singField=field[:-3] %}
+            {% set  singFieldCapitalize=field[:-3]|capitalize %}
+           if (($return['returncontroller'])=='{{ keyFields[field] }}')  echo $this->Form->hidden('{{ field }}', array('hiddenField' => true, 'value'=> $return['returncontrollerid']));
+                    else {
+                                               
+                       $myTemplates = ['select' => '   <div class="input-group"><select name="{{'{{'}}name{{'}}'}}"{{'{{'}}attrs{{'}}'}}>{{'{{'}}content{{'}}'}}</select>
+                                                <div class="input-group-append">
+                                                <button id="{{ singField }}ButtonAdd" class="btn btn-outline-secondary bi-plus-lg" type="button"></button>
+                                                </div></div>'];
+                echo $this->Form->control('{{ field }}', ['templates' => $myTemplates, 'options' => ${{ keyFields[field] }}, 'id'=> '{{ field }}','empty' => true]);              
+       
+                        }
+?>
+<!-- chiamo gli script per aggiungere e selezionare -->
+<!-- lo script Seleziona'nometabella' serve per selezionare quello giusto al click di 'seleziona' nella finestra modale di ricerca' -->
+<script>
+     $(document).ready(function () {
+        $('#{{ singField }}ButtonAdd').click({nome: '{{ plurFieldCapitalize }}', returncontroller: '{{ pluralVar }}'}, Aggiungi);
+        {%- set isKey = false %}
+        {%- if associations.BelongsTo is defined %}
+        {%- for alias, details in associations.BelongsTo %}
+        {%- if field == details.foreignKey %}
+        {%- set isKey = true %}
+            doAcSelect2('{{ field }}', '{{ plurFieldCapitalize }}' , '{{ details.displayField }}', 3);                 
+        {%- endif %}
+        {%- endfor %}
+        {%- endif %}  
+        });
+</script>
+           
+<!-- Bottoni per apertura delle finestre modali     -->  
+<button id='buttonmodal{{ plurFieldCapitalize }}' type='button' class='d-none btn btn-primary btn-lg' data-toggle='modal' data-target='#modal{{ plurFieldCapitalize }}'>
+</button>
+<!-- Contenuto delle finestre modali (viene riempito via JS)-->
+<div class='content modal fade' id='modal{{ plurFieldCapitalize }}' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+</div>
+          
+ <?php                  
+        {{- "\n" }}
+        {#%- else %#}
+          //  echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}]);
+            {{- "\n" }}
+        {#%- endif %#}
+    {%- elseif field not in ['created', 'modified', 'updated'] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+            echo $this->Form->control('{{ field }}', ['empty' => true]);
+            {{- "\n" }}
+        {%- else %}
+            echo $this->Form->control('{{ field }}');
+            {{- "\n" }}
+        {%- endif %}
+    {%- endif %}
+{%- endif %}
+{%- endfor %}
+
+        {%- if associations.BelongsToMany %}
+            {%- for assocName, assocData in associations.BelongsToMany %}
+            if (($return['returncontroller'])=='{{ assocData.property }}') echo $this->Form->hidden('{{ assocData.property }}.0.id', ['value' => $return['returncontrollerid']]);
+            else echo $this->Form->control('{{ assocData.property }}._ids', ['options' => ${{ assocData.variable }}]);
+                {{- "\n" }}
+            {%- endfor %}
+        {% endif %}
+        ?>
+<!-- chiamo gli script per aggiungere e selezionare nei belongsToMany-->
+<!-- lo script Seleziona'nometabella' serve per selezionare quello giusto al click di 'seleziona' nella finestra modale di ricerca' -->
+<script>
+     $(document).ready(function () {
+        {%- set isKey = false %}
+        {%- if associations.BelongsToMany  %}
+        {%- for assocName, assocData in associations.BelongsToMany %}
+            
+             {%- set isKey = true %}
+            doAcSelect2('{{ assocData.property }}-ids', '{{ assocName }}' , '{{ assocData.displayField }}', 3);                 
+       {# dump(associations.BelongsToMany) #}
+         {%- endfor %}
+        {%- endif %}  
+        });
+</script>

@@ -1,0 +1,296 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+{% set annotations = DocBlock.buildTableAnnotations(associations, associationInfo, behaviors, entity, namespace) %}
+<?php
+declare(strict_types=1);
+
+namespace {{ namespace }}\Model\Table;
+
+{% set uses = ['use Cake\\ORM\\Query;', 'use Cake\\ORM\\RulesChecker;', 'use Cake\\ORM\\Table;', 'use Cake\\Validation\\Validator;' , 'use Cake\\I18n\\FrozenTime;', 'use Cake\\Core\\Configure;'] %}
+{{ uses|join('\n')|raw }}
+
+{{ DocBlock.classDescription(name, 'Model', annotations)|raw }}
+class {{ name }}Table extends Table
+{
+    /**
+     * Initialize method
+     *
+     * @param array $config The configuration for the Table.
+     * @return void
+     */
+    public function initialize(array $config): void
+    {
+        parent::initialize($config);
+        
+          // Add the behavior to your table
+ 
+       
+    //PB per search
+    $this->addBehavior('Search.Search');
+    $this->searchManager()
+ 
+    {%- for field in fields %}
+     {%- if propertySchema[field]['kind'] in ['column'] %}
+        {%- if propertySchema[field]['type'] in ['date', 'datetime', 'time'] %}
+        ->add('{{ field }}', 'Search.Callback', 
+            [
+            'callback' => function($query, $args, $manager) {
+              $dd= \DateDataPerRicerca($query,$args,'{{ name }}','{{ field }}');    //funzione in config/common.php
+              $query= $dd['query'];
+              return $dd['return'];
+            }
+        ])            
+        {%- elseif propertySchema[field]['type'] in ['boolean','tinyint(1)'] %}
+        ->add('{{ field }}', 'Search.Boolean', [
+            'mode' => 'or',
+            'fields' => ['{{ field }}'],
+            ])
+        {%- elseif propertySchema[field]['type'] in ['integer','decimal','float'] %}
+        ->add('{{ field }}', 'Search.Value', [
+            'fields' => ['{{ field }}'],
+            ])    
+        {%- elseif propertySchema[field]['type'] in ['text','string'] %}
+        ->add('{{ field }}', 'Search.Like', [
+            'before' => true,
+            'after' => true,
+            'mode' => 'or',
+            'comparison' => 'LIKE',
+            'wildcardAny' => '*',
+            'wildcardOne' => '?',
+            'fields' => ['{{ field }}'],
+            ])             
+        {%- else %}   
+        ->add('{{ field }}', 'Search.Value', [
+            'fields' => ['{{ field }}'],
+            ])    
+        {%- endif %}   
+   {%- endif %} 
+    {%- endfor %}   
+    ;
+    //End PB          
+        
+
+{% if table %}
+        $dbPrefix=Configure::read('regtoscConf.dbPrefix');
+        $tableName=$dbPrefix . '{{ table }}';
+        $this->setTable($tableName);
+{% endif %}
+
+{%- if displayField %}
+$this->setDisplayField('{{ displayField }}');
+{% endif %}
+
+{%- if primaryKey %}
+{%- if primaryKey is iterable and primaryKey|length > 1 %}
+    $this->setPrimaryKey({{ Bake.exportArray(primaryKey)|raw }});
+{{- "\n" }}
+{%- endif %}
+//berna
+{%- else %}
+        // $this->setPrimaryKey('{{ primaryKey|as_array|first }}');
+        $this->setPrimaryKey('id');
+        //
+{% endif %}
+{{- "\n" }}
+
+
+{%- if behaviors %}
+
+{% endif %}
+
+{%- for behavior, behaviorData in behaviors %}
+        $this->addBehavior('{{ behavior }}'{{ (behaviorData ? (", " ~ Bake.exportArray(behaviorData, 2)|raw ~ '') : '')|raw }});
+{% endfor %}
+
+{%- if associations.belongsTo or associations.hasMany or associations.belongsToMany %}
+
+{% endif %}
+
+{%- for type, assocs in associations %}
+    {%- for assoc in assocs %}
+        {%- set assocData = [] %}
+        {%- for key, val in assoc %}
+            {%- if key is not same as('alias') %}
+                {%- set assocData = assocData|merge({(key): val}) %}
+            {%- endif %}
+        {%- endfor %}
+        $this->{{ type }}('{{ assoc.alias }}', {{ Bake.exportArray(assocData, 2)|raw }});
+        {{- "\n" }}
+    {%- endfor %}
+{% endfor %}
+    }
+{{- "\n" }}
+
+
+{#
+{%- if validation %}
+ 
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault(Validator $validator): Validator
+    {
+{% for field, rules in validation %}
+{% set validationMethods = Bake.getValidationMethods(field, rules) %}
+{% if validationMethods %}
+        $validator
+{% for validationMethod in validationMethods %}
+{% if loop.last %}
+{% set validationMethod = validationMethod ~ ';' %}
+{% endif %}
+            {{ validationMethod|raw }}
+{% endfor %}
+
+{% endif %}
+{% endfor %}
+        return $validator;
+    }
+{% endif %}
+#}
+
+//PB Validation Rules
+ public function validationDefault(Validator $validator): Validator
+    {
+        // Validation Provider custom in src\Model\RegtoscProvider.php
+        $validator->setProvider('custom',  new \App\Model\RegtoscProvider());
+ 
+        $validator
+            ->integer('id')
+            ->allowEmptyString('id', null, 'create');
+     /*    $validator->add('id', 'custom', [
+             'rule' => ['impedisceduplicati','id',$this],
+             'provider'=>'custom',
+             'message'=>'Record Duplicato'
+            ]);  */
+            
+     {%- for field in fields %}
+      {%- if field not in ['created','modified','updated'] %}   
+     {%- if propertySchema[field]['kind'] in ['column'] %}       
+             {%- if propertySchema[field]['type'] in ['date'] %} 
+        $validator
+             {%- if propertySchema[field]['null'] %}    
+    ->allowEmptyDate('{{ field }}')  
+             {%- else %}
+    ->notEmptyDate('{{ field }}', 'Inserimento necessario')
+             {%- endif %}   
+            ->date('{{ field }}')  ;
+             $validator->add('{{ field }}', 'custom', [
+             'rule' => ['verificaData','date'],
+             'provider'=>'custom',
+             'message'=>'Data errata (esempio 31/12/2016)'
+            ]); 
+             
+             {%- elseif propertySchema[field]['type'] in ['datetime'] %} 
+             $validator
+             {%- if propertySchema[field]['null'] %}    
+               ->allowEmptyDateTime('{{ field }}')  
+                {%- else %}
+               ->notEmptyDateTime('{{ field }}', 'Inserimento necessario')
+                  {%- endif %}   
+               ->datetime('{{ field }}')  ;
+             $validator->add('{{ field }}', 'custom', [
+             'rule' => ['verificaData','datetime'],
+             'provider'=>'custom',
+             'message'=>'Data errata (esempio 31/12/2016 23:59)'
+            ]); 
+             
+              {%- elseif propertySchema[field]['type'] in ['integer', 'float'] %} 
+             $validator
+             {%- if propertySchema[field]['null'] %}    
+               ->allowEmptyString('{{ field }}')  
+                {%- else %}
+               ->notEmptyString('{{ field }}', 'Inserimento necessario')
+                  {%- endif %}   
+               ->numeric('{{ field }}')
+               ->range('{{ field }}',[-1,1000000], 'Inserimento consentito fra 0 e 999999');
+            
+              {%- elseif propertySchema[field]['type'] in ['decimal'] %} 
+             $validator
+             {%- if propertySchema[field]['null'] %}    
+               ->allowEmptyString('{{ field }}')  
+                {%- else %}
+               ->notEmptyString('{{ field }}', 'Inserimento necessario')
+                  {%- endif %}   
+               ->decimal('{{ field }}')
+               ->range('{{ field }}',[-1000000,1000000], 'Inserimento consentito fra -999999 e 999999');
+             
+            {%- elseif propertySchema[field]['type'] in ['string','text'] %} 
+             $validator
+             {%- if propertySchema[field]['null'] %}    
+               ->allowEmptyString('{{ field }}')  
+                {%- else %}
+               ->notEmptyString('{{ field }}', 'Inserimento necessario')
+                  {%- endif %}   
+               ->notBlank('{{ field }}');
+               
+              {%- else %}   
+                   $validator
+             {%- if propertySchema[field]['null'] %}    
+               ->allowEmptyString('{{ field }}'); 
+                {%- else %}
+               ->notEmptyString('{{ field }}', 'Inserimento necessario');
+                  {%- endif %}     
+             {%- endif %}    
+        {# dump(propertySchema[field]) #}        
+      {%- endif %}           
+    {%- endif %}
+    {%- endfor %}
+    
+    return $validator;
+ }
+/*End PB*/
+
+
+
+
+
+
+{%- if rulesChecker %}
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+{% for field, rule in rulesChecker %}
+        $rules->add($rules->{{ rule.name }}(['{{ field }}']{{ (rule.extra is defined and rule.extra ? (", '#{rule.extra}'") : '')|raw }}), ['errorField' => '{{ field }}']);
+{% endfor %}
+
+        return $rules;
+    }
+{% endif %}
+
+{%- if connection is not same as('default') %}
+
+    /**
+     * Returns the database connection name to use by default.
+     *
+     * @return string
+     */
+    public static function defaultConnectionName(): string
+    {
+        return '{{ connection }}';
+    }
+{% endif %}
+
+}

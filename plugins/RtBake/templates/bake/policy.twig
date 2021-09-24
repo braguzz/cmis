@@ -1,0 +1,115 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         1.0.0
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+<?php
+declare(strict_types=1);
+
+namespace {{ namespace }}\Policy;
+
+
+{% set imports = [
+    'Authorization\\IdentityInterface',
+'Authorization\\Policy\\BeforePolicyInterface',
+'Cake\\Core\\Configure',
+    classname,
+] %}
+{% for import in imports|sort %}
+use {{ import }};
+{% endfor %}
+
+/**
+ * {{ name }} policy
+ */
+ class {{ name }}{{ suffix }}Policy implements BeforePolicyInterface
+ {
+
+ //PB Mappa il Json inserito all'interno dei ruoli per dare le autorizzazioni necessarie
+ public function before($user, $resource, $action)
+ {    
+    if (is_string($user->role->data_config) && is_array(json_decode($user->role->data_config,true)))
+           {
+           $user->role->data_config =json_decode($user->role->data_config);
+           }    
+
+    //admin can do ALL PB  
+    if (isset($user->role->data_config->all->canDoAll))
+    {
+           if ($user->role->data_config->all->canDoAll === 'true')
+           {        
+           return true;
+           } 
+    }
+
+        //cerca di vedere se ci sono autorizzazioni globali definite in regtoscconf- DA TESTARE 
+       $autorizzazioniMap = Configure::read('regtoscConf.autorizzazioniMap');
+       if (isset($user->role->data_config->all->canReadAll) && $user->role->data_config->all->canReadAll)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Read'] )) return true;
+            } 
+       if (isset($user->role->data_config->all->canUpdateAll) && $user->role->data_config->all->canUpdateAll)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Update'] )) return true;
+            } 
+        if (isset($user->role->data_config->all->canCreateAll) && $user->role->data_config->all->canCreateAll)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Create'] )) return true;
+            }     
+        if (isset($user->role->data_config->all->canDeleteAll) && $user->role->data_config->all->canDeleteAll)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Delete'] )) return true;
+            }   
+     
+       //cerca di vedere se ci sono autorizzazioni globali relative a questa tabella definite in regtoscconf- DA TESTARE       
+             if (isset($user->role->data_config->{{ name }}->canRead) && $user->role->data_config->{{ name }}->canRead)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Read'] )) return true;
+            } 
+       if (isset($user->role->data_config->{{ name }}->canUpdate) && $user->role->data_config->{{ name }}->canUpdate)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Update'] )) return true;
+            } 
+        if (isset($user->role->data_config->{{ name }}->canCreate) && $user->role->data_config->{{ name }}->canCreate)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Create'] )) return true;
+            }     
+        if (isset($user->role->data_config->{{ name }}->canDelete) && $user->role->data_config->{{ name }}->canDelete)
+            {        
+               if (in_array ( $action, $autorizzazioniMap['Delete'] )) return true;
+            }   
+            
+     
+    // cerca di vedere se ci sono autorizzazioni specifiche definite nel json relative al ruolo - DA TESTARE
+    $canatc= 'can' . ucfirst($action);
+    if (isset( $user->role->data_config->{{ name }}->$canatc ))
+    {     
+    return  filter_var($user->role->data_config->{{ name }}->$canatc, FILTER_VALIDATE_BOOLEAN);
+    }      
+    
+    // altrimenti NON si permette
+    // se vogliemo continuare coi classici canAction togliere il return false e gestirlo 
+    // all'interno dei vari canAction
+    return false;  
+    
+ }   
+ //END PB  
+
+
+
+
+
+{% if type == 'entity' %}
+    {{- _view.element('Authorization.entity_methods') -}}
+{% endif %}
+}

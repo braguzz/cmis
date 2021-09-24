@@ -1,0 +1,53 @@
+/**-----------------------------------------------------------------------------
+ * addfromadd method
+ * Per aggiungere  provenendo dalla vista add ( o edit) di una altra tabella
+ * viene chiamata dal controller add di questo Controller nel caso venga chiamato 
+ * da un add di un altro Controller. In casi come questi la add di questo Controller
+ * visualizza la vista add_ajax_belong.ctp che per salvare utilizza via ajax addfromadd()
+ * @return void
+ *----------------------------------------------------------------------------*/    
+    public function addfromadd() 
+    { 
+        $this->autoRender = false;
+        $return=$this->request->getParam('pass');
+        if (empty($return)) {
+            $return['id'] = "";
+            $return['returnid'] = "";
+            $return['return'] = "";
+        }
+    
+        ${{ currentModelName }} = $this->{{ currentModelName }}->newEmptyEntity();
+        $this->Authorization->authorize(${{ currentModelName }});
+        
+         ${{ currentModelName }} = $this->{{ currentModelName }}->patchEntity(${{ currentModelName }}, $this->request->getData());
+         
+         
+         if (!(${{ currentModelName }}->getErrors())) { 
+        if ($this->{{ currentModelName }}->save(${{ currentModelName }}) )
+            {
+            $this->Flash->success(__('salvato'));
+            $st = ${{ currentModelName }}->toArray();
+            $response = $this->getResponse();      
+            $this->autoRender = false;
+            return $response->withType( 'application/json' )
+                ->withStringBody( json_encode( $st ) );
+            flush();
+            } 
+        
+         } else {
+        // didn't validate logic
+            $errors["ko"] = $this->{{ currentModelName }}->validationErrors;
+            $this->autoRender = false;
+            return $response->withType( 'application/json' )
+                             ->withStringBody( json_encode( $errors ) );
+            flush();
+        }
+
+    }
+        
+        
+        
+        
+        
+        
+      

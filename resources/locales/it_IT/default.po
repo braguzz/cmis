@@ -1,0 +1,1717 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Geko V1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Angelo Marcotulli <angelo.marcotulli@regione.toscana.it>\n"
+"Language-Team: Angelo Marcotulli <angelo.marcotullił@regione.toscana.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ita\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: Controller/Component/AuthComponent.php:369
+msgid "You are not authorized to access that location."
+msgstr "Accesso negato."
+
+#: Error/ExceptionRenderer.php:209
+msgid "Not Found"
+msgstr "Pagina non trovata"
+
+#: Error/ExceptionRenderer.php:231
+msgid "An Internal Error Has Occurred."
+msgstr "Errore interno del server"
+
+#: Model/Validator/CakeValidationSet.php:287
+msgid "This field cannot be left blank"
+msgstr "Il campo non puÃ² essere vuoto"
+
+#: Network/CakeResponse.php:1222
+msgid "The requested file was not found"
+msgstr "Il file richiesto non Ã¨ stato trovato"
+
+#: Utility/CakeNumber.php:101
+msgid "%d KB"
+msgstr ""
+
+#: Utility/CakeNumber.php:103
+msgid "%.2f MB"
+msgstr ""
+
+#: Utility/CakeNumber.php:105
+msgid "%.2f GB"
+msgstr ""
+
+#: Utility/CakeNumber.php:107
+msgid "%.2f TB"
+msgstr ""
+
+#: Utility/CakeNumber.php:99
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] ""
+msgstr[1] "%d Byte"
+
+#: Utility/CakeTime.php:389
+msgid "Today, %s"
+msgstr "Oggi, %s"
+
+#: Utility/CakeTime.php:392
+msgid "Yesterday, %s"
+msgstr "Ieri, %s"
+
+#: Utility/CakeTime.php:395
+msgid "Tomorrow, %s"
+msgstr "Domani, %s"
+
+#: Utility/CakeTime.php:400
+msgid "Sunday"
+msgstr "Domenica"
+
+#: Utility/CakeTime.php:401
+msgid "Monday"
+msgstr "Lunedì"
+
+#: Utility/CakeTime.php:402
+msgid "Tuesday"
+msgstr "Martedì"
+
+#: Utility/CakeTime.php:403
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+#: Utility/CakeTime.php:404
+msgid "Thursday"
+msgstr "Giovedì"
+
+#: Utility/CakeTime.php:405
+msgid "Friday"
+msgstr "Venerdì"
+
+#: Utility/CakeTime.php:406
+msgid "Saturday"
+msgstr "Sabato"
+
+#: Utility/CakeTime.php:412
+msgid "On %s %s"
+msgstr "%s %s"
+
+#: Utility/CakeTime.php:805
+msgid "just now"
+msgstr "adesso"
+
+#: Utility/CakeTime.php:809
+msgid "on %s"
+msgstr "%s"
+
+#: Utility/CakeTime.php:853
+msgid "%s ago"
+msgstr "%s fa"
+
+#: Utility/CakeTime.php:872;894
+msgid "days"
+msgstr "giorni"
+
+#: Utility/CakeTime.php:154
+msgid "abday"
+msgstr ""
+
+#: Utility/CakeTime.php:160
+msgid "day"
+msgstr ""
+
+#: Utility/CakeTime.php:166
+msgid "d_t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:188
+msgid "abmon"
+msgstr ""
+
+#: Utility/CakeTime.php:194
+msgid "mon"
+msgstr ""
+
+#: Utility/CakeTime.php:205
+msgid "am_pm"
+msgstr ""
+
+#: Utility/CakeTime.php:212
+msgid "t_fmt_ampm"
+msgstr ""
+
+#: Utility/CakeTime.php:226
+msgid "d_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:232
+msgid "t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:831
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d anno"
+msgstr[1] "%d anni"
+
+#: Utility/CakeTime.php:834
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mese"
+msgstr[1] "%d mesi"
+
+#: Utility/CakeTime.php:837
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d settimana"
+msgstr[1] "%d settimane"
+
+#: Utility/CakeTime.php:840
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d giorno"
+msgstr[1] "%d giorni"
+
+#: Utility/CakeTime.php:843
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ora"
+msgstr[1] "%d ore"
+
+#: Utility/CakeTime.php:846
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuto"
+msgstr[1] "%d minuti"
+
+#: Utility/CakeTime.php:849
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d secondo"
+msgstr[1] "%d secondi"
+
+#: View/Helper/FormHelper.php:681
+msgid "Error in field %s"
+msgstr "Errore nel campo %s"
+
+#: View/Helper/FormHelper.php:868 View/Scaffolds/form.ctp:48
+#: View/Scaffolds/index.ctp:79;94 View/Scaffolds/view.ctp:66;81;192
+msgid "New %s"
+msgstr "Nuovo %s"
+
+#: View/Helper/FormHelper.php:874 View/Scaffolds/view.ctp:54;113
+msgid "Edit %s"
+msgstr "Modifica %s"
+
+#: View/Helper/FormHelper.php:1436
+msgid "empty"
+msgstr "vuoto"
+
+#: View/Helper/FormHelper.php:2704
+msgid "January"
+msgstr "Gennaio"
+
+#: View/Helper/FormHelper.php:2705
+msgid "February"
+msgstr "Febbraio"
+
+#: View/Helper/FormHelper.php:2706
+msgid "March"
+msgstr "Marzo"
+
+#: View/Helper/FormHelper.php:2707
+msgid "April"
+msgstr "Aprile"
+
+#: View/Helper/FormHelper.php:2708
+msgid "May"
+msgstr "Maggio"
+
+#: View/Helper/FormHelper.php:2709
+msgid "June"
+msgstr "Giugno"
+
+#: View/Helper/FormHelper.php:2710
+msgid "July"
+msgstr "Luglio"
+
+#: View/Helper/FormHelper.php:2711
+msgid "August"
+msgstr "Agosto"
+
+#: View/Helper/FormHelper.php:2712
+msgid "September"
+msgstr "Settembre"
+
+#: View/Helper/FormHelper.php:2713
+msgid "October"
+msgstr "Ottobre"
+
+#: View/Helper/FormHelper.php:2714
+msgid "November"
+msgstr "Novembre"
+
+#: View/Helper/FormHelper.php:2715
+msgid "December"
+msgstr "Dicembre"
+
+#: View/Helper/HtmlHelper.php:747
+msgid "Home"
+msgstr "Home"
+
+#: View/Helper/PaginatorHelper.php:580
+msgid " of "
+msgstr " di "
+
+#: View/Areas/add.ctp:4
+msgid "Add Area"
+msgstr "Aggiungi Area"
+
+#: View/Areas/add.ctp:9 View/Areas/edit.ctp:10 View/Beneficiaries/add.ctp:13
+#: View/Beneficiaries/edit.ctp:14 View/Chapters/add.ctp:14
+#: View/Chapters/edit.ctp:15 View/Commitments/add.ctp:14
+#: View/Commitments/edit.ctp:15 View/ContractGoods/add.ctp:11
+#: View/ContractGoods/edit.ctp:12 View/ContractItems/add.ctp:16
+#: View/ContractItems/edit.ctp:17 View/Contracts/add.ctp:15
+#: View/Contracts/edit.ctp:16 View/Decrees/add.ctp:13 View/Decrees/edit.ctp:14
+#: View/ItemNames/add.ctp:13 View/ItemNames/edit.ctp:14
+#: View/ItemRows/add.ctp:19 View/ItemRows/edit.ctp:20 View/Managers/add.ctp:11
+#: View/Managers/edit.ctp:12 View/OrderItems/add.ctp:12
+#: View/OrderItems/edit.ctp:13 View/Orders/add.ctp:12 View/Orders/edit.ctp:13
+#: View/People/add.ctp:10 View/People/edit.ctp:11 View/Services/add.ctp:9
+#: View/Services/edit.ctp:10 View/SettlementItems/add.ctp:10
+#: View/SettlementItems/edit.ctp:11 View/Settlements/add.ctp:12
+#: View/Settlements/edit.ctp:13 View/Types/add.ctp:9 View/Types/edit.ctp:10
+#: View/Usetypes/add.ctp:9 View/Usetypes/edit.ctp:10
+msgid "Submit"
+msgstr "OK"
+
+#: View/Areas/add.ctp:12 View/Areas/edit.ctp:13 View/Areas/index.ctp:7;36
+#: View/Areas/view.ctp:17;40;83 View/Beneficiaries/add.ctp:16
+#: View/Beneficiaries/edit.ctp:17 View/Beneficiaries/index.ctp:11;44
+#: View/Beneficiaries/view.ctp:37;67;113;155;190 View/Chapters/add.ctp:17
+#: View/Chapters/edit.ctp:18 View/Chapters/index.ctp:12;48
+#: View/Chapters/view.ctp:42;68;112 View/Commitments/add.ctp:17
+#: View/Commitments/edit.ctp:18 View/Commitments/index.ctp:12;50
+#: View/Commitments/view.ctp:42;64 View/ContractGoods/add.ctp:14
+#: View/ContractGoods/edit.ctp:15 View/ContractGoods/index.ctp:9;42
+#: View/ContractGoods/view.ctp:27 View/ContractItems/add.ctp:19
+#: View/ContractItems/edit.ctp:20 View/ContractItems/index.ctp:14;52
+#: View/ContractItems/view.ctp:52 View/Contracts/add.ctp:18
+#: View/Contracts/edit.ctp:19 View/Contracts/index.ctp:13;52
+#: View/Contracts/view.ctp:47;76;114;154;189;223 View/Decrees/add.ctp:16
+#: View/Decrees/edit.ctp:17 View/Decrees/index.ctp:11;46
+#: View/Decrees/view.ctp:37;61;101 View/ItemNames/add.ctp:16
+#: View/ItemNames/edit.ctp:17 View/ItemNames/index.ctp:11;50
+#: View/ItemNames/view.ctp:37 View/ItemRows/add.ctp:22
+#: View/ItemRows/edit.ctp:23 View/ItemRows/index.ctp:17;68
+#: View/ItemRows/view.ctp:67 View/Managers/add.ctp:14
+#: View/Managers/edit.ctp:15 View/Managers/index.ctp:9;42
+#: View/Managers/view.ctp:27;51 View/OrderItems/add.ctp:15
+#: View/OrderItems/edit.ctp:16 View/OrderItems/index.ctp:10;44
+#: View/OrderItems/view.ctp:32 View/Orders/add.ctp:15 View/Orders/edit.ctp:16
+#: View/Orders/index.ctp:10;46 View/Orders/view.ctp:32;56
+#: View/People/add.ctp:13 View/People/edit.ctp:14 View/People/index.ctp:8;38
+#: View/People/view.ctp:22 View/Services/add.ctp:12 View/Services/edit.ctp:13
+#: View/Services/index.ctp:7;36 View/Services/view.ctp:17;42;85;128
+#: View/SettlementItems/add.ctp:13 View/SettlementItems/edit.ctp:14
+#: View/SettlementItems/index.ctp:8;40 View/SettlementItems/view.ctp:22
+#: View/Settlements/add.ctp:15 View/Settlements/edit.ctp:16
+#: View/Settlements/index.ctp:10;44 View/Settlements/view.ctp:32;57;91
+#: View/Types/add.ctp:12 View/Types/edit.ctp:13 View/Types/index.ctp:7;36
+#: View/Types/view.ctp:17;44 View/Usetypes/add.ctp:12
+#: View/Usetypes/edit.ctp:13 View/Usetypes/index.ctp:7;36
+#: View/Usetypes/view.ctp:17;42;85;128
+msgid "Actions"
+msgstr "Azioni"
+
+#: View/Areas/add.ctp:15 View/Areas/edit.ctp:17 View/Areas/view.ctp:21
+#: View/ItemNames/add.ctp:20 View/ItemNames/edit.ctp:22
+#: View/ItemNames/index.ctp:53 View/ItemNames/view.ctp:43
+#: View/ItemRows/add.ctp:30 View/ItemRows/edit.ctp:32
+#: View/ItemRows/index.ctp:75 View/ItemRows/view.ctp:77
+msgid "List Areas"
+msgstr "Elenco Aree"
+
+#: View/Areas/add.ctp:16 View/Areas/edit.ctp:18 View/Areas/index.ctp:39
+#: View/Areas/view.ctp:23 View/ContractGoods/add.ctp:18
+#: View/ContractGoods/edit.ctp:20 View/ContractGoods/index.ctp:45
+#: View/ContractGoods/view.ctp:33 View/ItemNames/add.ctp:19
+#: View/ItemNames/edit.ctp:21 View/ItemNames/view.ctp:41
+#: View/Services/add.ctp:16 View/Services/edit.ctp:18
+#: View/Services/index.ctp:39 View/Services/view.ctp:23
+#: View/Usetypes/add.ctp:16 View/Usetypes/edit.ctp:18
+#: View/Usetypes/index.ctp:39 View/Usetypes/view.ctp:23
+msgid "List Item Names"
+msgstr "Elenco Item"
+
+#: View/Areas/add.ctp:17 View/Areas/edit.ctp:19 View/Areas/index.ctp:40
+#: View/Areas/view.ctp:24;62 View/ContractGoods/add.ctp:19
+#: View/ContractGoods/edit.ctp:21 View/ContractGoods/index.ctp:46
+#: View/ContractGoods/view.ctp:34 View/ItemNames/index.ctp:52
+#: View/ItemNames/view.ctp:42 View/Services/add.ctp:17
+#: View/Services/edit.ctp:19 View/Services/index.ctp:40
+#: View/Services/view.ctp:24;64 View/Usetypes/add.ctp:17
+#: View/Usetypes/edit.ctp:19 View/Usetypes/index.ctp:40
+#: View/Usetypes/view.ctp:24;64
+msgid "New Item Name"
+msgstr "Nuovo Item"
+
+#: View/Areas/add.ctp:18 View/Areas/edit.ctp:20 View/Areas/index.ctp:41
+#: View/Areas/view.ctp:25 View/Beneficiaries/add.ctp:22
+#: View/Beneficiaries/edit.ctp:24 View/Beneficiaries/index.ctp:49
+#: View/Beneficiaries/view.ctp:45 View/Chapters/add.ctp:25
+#: View/Chapters/edit.ctp:27 View/Chapters/index.ctp:55
+#: View/Chapters/view.ctp:52 View/ItemRows/add.ctp:25
+#: View/ItemRows/edit.ctp:27 View/ItemRows/view.ctp:71
+#: View/Services/add.ctp:18 View/Services/edit.ctp:20
+#: View/Services/index.ctp:41 View/Services/view.ctp:25 View/Types/add.ctp:16
+#: View/Types/edit.ctp:18 View/Types/index.ctp:39 View/Types/view.ctp:23
+#: View/Usetypes/add.ctp:18 View/Usetypes/edit.ctp:20
+#: View/Usetypes/index.ctp:41 View/Usetypes/view.ctp:25
+msgid "List Item Rows"
+msgstr "Elenco ItemPivot"
+
+#: View/Areas/add.ctp:19 View/Areas/edit.ctp:21 View/Areas/index.ctp:42
+#: View/Areas/view.ctp:26;111 View/Beneficiaries/add.ctp:23
+#: View/Beneficiaries/edit.ctp:25 View/Beneficiaries/index.ctp:50
+#: View/Beneficiaries/view.ctp:46;141 View/Chapters/add.ctp:26
+#: View/Chapters/edit.ctp:28 View/Chapters/index.ctp:56
+#: View/Chapters/view.ctp:53;140 View/ItemRows/index.ctp:70
+#: View/ItemRows/view.ctp:72 View/Services/add.ctp:19
+#: View/Services/edit.ctp:21 View/Services/index.ctp:42
+#: View/Services/view.ctp:26;113 View/Types/add.ctp:17 View/Types/edit.ctp:19
+#: View/Types/index.ctp:40 View/Types/view.ctp:24;72 View/Usetypes/add.ctp:19
+#: View/Usetypes/edit.ctp:21 View/Usetypes/index.ctp:42
+#: View/Usetypes/view.ctp:26;113
+msgid "New Item Row"
+msgstr "Nuovo ItemPivot"
+
+#: View/Areas/edit.ctp:4 View/Areas/view.ctp:19
+msgid "Edit Area"
+msgstr "Modifica Area"
+
+#: View/Areas/edit.ctp:16 View/Areas/index.ctp:16 View/Areas/view.ctp:53;102
+#: View/Beneficiaries/edit.ctp:20 View/Beneficiaries/index.ctp:24
+#: View/Beneficiaries/view.ctp:83;132;167;202 View/Chapters/edit.ctp:21
+#: View/Chapters/index.ctp:28 View/Chapters/view.ctp:82;131
+#: View/Commitments/edit.ctp:21 View/Commitments/index.ctp:30
+#: View/Commitments/view.ctp:74 View/ContractGoods/edit.ctp:18
+#: View/ContractGoods/index.ctp:22 View/ContractItems/edit.ctp:23
+#: View/ContractItems/index.ctp:32 View/Contracts/edit.ctp:22
+#: View/Contracts/index.ctp:32 View/Contracts/view.ctp:87;130;167;200;235
+#: View/Decrees/edit.ctp:20 View/Decrees/index.ctp:26
+#: View/Decrees/view.ctp:75;116 View/ItemNames/edit.ctp:20
+#: View/ItemNames/index.ctp:30 View/ItemRows/edit.ctp:26
+#: View/ItemRows/index.ctp:48 View/Managers/edit.ctp:18
+#: View/Managers/index.ctp:22 View/Managers/view.ctp:65
+#: View/OrderItems/edit.ctp:19 View/OrderItems/index.ctp:24
+#: View/Orders/edit.ctp:19 View/Orders/index.ctp:26 View/Orders/view.ctp:68
+#: View/People/edit.ctp:17 View/People/index.ctp:18 View/Services/edit.ctp:16
+#: View/Services/index.ctp:16 View/Services/view.ctp:55;104;141
+#: View/SettlementItems/edit.ctp:17 View/SettlementItems/index.ctp:20
+#: View/Settlements/edit.ctp:19 View/Settlements/index.ctp:24
+#: View/Settlements/view.ctp:70;101 View/Types/edit.ctp:16
+#: View/Types/index.ctp:16 View/Types/view.ctp:63 View/Usetypes/edit.ctp:16
+#: View/Usetypes/index.ctp:16 View/Usetypes/view.ctp:55;104;141
+msgid "Delete"
+msgstr "Rimuovi"
+
+#: View/Areas/edit.ctp:16 View/Areas/index.ctp:16
+#: View/Areas/view.ctp:20;53;102 View/Beneficiaries/edit.ctp:20
+#: View/Beneficiaries/index.ctp:24
+#: View/Beneficiaries/view.ctp:40;83;132;167;202 View/Chapters/edit.ctp:21
+#: View/Chapters/index.ctp:28 View/Chapters/view.ctp:45;82;131
+#: View/Commitments/edit.ctp:21 View/Commitments/index.ctp:30
+#: View/Commitments/view.ctp:45;74 View/ContractGoods/edit.ctp:18
+#: View/ContractGoods/index.ctp:22 View/ContractGoods/view.ctp:30
+#: View/ContractItems/edit.ctp:23 View/ContractItems/index.ctp:32
+#: View/ContractItems/view.ctp:55 View/Contracts/edit.ctp:22
+#: View/Contracts/index.ctp:32 View/Contracts/view.ctp:50;87;130;167;200;235
+#: View/Decrees/edit.ctp:20 View/Decrees/index.ctp:26
+#: View/Decrees/view.ctp:40;75;116 View/ItemNames/edit.ctp:20
+#: View/ItemNames/index.ctp:30 View/ItemNames/view.ctp:40
+#: View/ItemRows/edit.ctp:26 View/ItemRows/index.ctp:48
+#: View/ItemRows/view.ctp:70 View/Managers/edit.ctp:18
+#: View/Managers/index.ctp:22 View/Managers/view.ctp:30;65
+#: View/OrderItems/edit.ctp:19 View/OrderItems/index.ctp:24
+#: View/OrderItems/view.ctp:35 View/Orders/edit.ctp:19
+#: View/Orders/index.ctp:26 View/Orders/view.ctp:35;68 View/People/edit.ctp:17
+#: View/People/index.ctp:18 View/People/view.ctp:25 View/Services/edit.ctp:16
+#: View/Services/index.ctp:16 View/Services/view.ctp:20;55;104;141
+#: View/SettlementItems/edit.ctp:17 View/SettlementItems/index.ctp:20
+#: View/SettlementItems/view.ctp:25 View/Settlements/edit.ctp:19
+#: View/Settlements/index.ctp:24 View/Settlements/view.ctp:35;70;101
+#: View/Types/edit.ctp:16 View/Types/index.ctp:16 View/Types/view.ctp:20;63
+#: View/Usetypes/edit.ctp:16 View/Usetypes/index.ctp:16
+#: View/Usetypes/view.ctp:20;55;104;141
+msgid "Are you sure you want to delete # %s?"
+msgstr "Sei sicuro di voler rimuovere # %s?"
+
+#: View/Areas/index.ctp:2
+msgid "Areas"
+msgstr "Aree"
+
+#: View/Areas/index.ctp:14 View/Areas/view.ctp:51;100
+#: View/Beneficiaries/index.ctp:22 View/Beneficiaries/view.ctp:81;130;165;200
+#: View/Chapters/index.ctp:26 View/Chapters/view.ctp:80;129
+#: View/Commitments/index.ctp:28 View/Commitments/view.ctp:72
+#: View/ContractGoods/index.ctp:20 View/ContractItems/index.ctp:30
+#: View/Contracts/index.ctp:30 View/Contracts/view.ctp:85;128;165;198;233
+#: View/Decrees/index.ctp:24 View/Decrees/view.ctp:73;114
+#: View/ItemNames/index.ctp:28 View/ItemRows/index.ctp:46
+#: View/Managers/index.ctp:20 View/Managers/view.ctp:63
+#: View/OrderItems/index.ctp:22 View/Orders/index.ctp:24
+#: View/Orders/view.ctp:66 View/People/index.ctp:16 View/Services/index.ctp:14
+#: View/Services/view.ctp:53;102;139 View/SettlementItems/index.ctp:18
+#: View/Settlements/index.ctp:22 View/Settlements/view.ctp:68;99
+#: View/Types/index.ctp:14 View/Types/view.ctp:61 View/Usetypes/index.ctp:14
+#: View/Usetypes/view.ctp:53;102;139
+msgid "View"
+msgstr "Mostra"
+
+#: View/Areas/index.ctp:15 View/Areas/view.ctp:52;101
+#: View/Beneficiaries/index.ctp:23 View/Beneficiaries/view.ctp:82;131;166;201
+#: View/Chapters/index.ctp:27 View/Chapters/view.ctp:81;130
+#: View/Commitments/index.ctp:29 View/Commitments/view.ctp:73
+#: View/ContractGoods/index.ctp:21 View/ContractItems/index.ctp:31
+#: View/Contracts/index.ctp:31 View/Contracts/view.ctp:86;129;166;199;234
+#: View/Decrees/index.ctp:25 View/Decrees/view.ctp:74;115
+#: View/ItemNames/index.ctp:29 View/ItemRows/index.ctp:47
+#: View/Managers/index.ctp:21 View/Managers/view.ctp:64
+#: View/OrderItems/index.ctp:23 View/Orders/index.ctp:25
+#: View/Orders/view.ctp:67 View/People/index.ctp:17 View/Services/index.ctp:15
+#: View/Services/view.ctp:54;103;140 View/SettlementItems/index.ctp:19
+#: View/Settlements/index.ctp:23 View/Settlements/view.ctp:69;100
+#: View/Types/index.ctp:15 View/Types/view.ctp:62 View/Usetypes/index.ctp:15
+#: View/Usetypes/view.ctp:54;103;140
+msgid "Edit"
+msgstr "Modifica"
+
+#: View/Areas/index.ctp:24 View/Beneficiaries/index.ctp:32
+#: View/Chapters/index.ctp:36 View/Commitments/index.ctp:38
+#: View/ContractGoods/index.ctp:30 View/ContractItems/index.ctp:40
+#: View/Contracts/index.ctp:40 View/Decrees/index.ctp:34
+#: View/ItemNames/index.ctp:38 View/ItemRows/index.ctp:56
+#: View/Managers/index.ctp:30 View/OrderItems/index.ctp:32
+#: View/Orders/index.ctp:34 View/People/index.ctp:26
+#: View/Services/index.ctp:24 View/SettlementItems/index.ctp:28
+#: View/Settlements/index.ctp:32 View/Types/index.ctp:24
+#: View/Usetypes/index.ctp:24
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"Pagina {:page} di {:pages}, vista {:current} righe di {:count} totali, da {:"
+"start}, a {:end}"
+
+#: View/Areas/index.ctp:29 View/Beneficiaries/index.ctp:37
+#: View/Chapters/index.ctp:41 View/Commitments/index.ctp:43
+#: View/ContractGoods/index.ctp:35 View/ContractItems/index.ctp:45
+#: View/Contracts/index.ctp:45 View/Decrees/index.ctp:39
+#: View/ItemNames/index.ctp:43 View/ItemRows/index.ctp:61
+#: View/Managers/index.ctp:35 View/OrderItems/index.ctp:37
+#: View/Orders/index.ctp:39 View/People/index.ctp:31
+#: View/Services/index.ctp:29 View/SettlementItems/index.ctp:33
+#: View/Settlements/index.ctp:37 View/Types/index.ctp:29
+#: View/Usetypes/index.ctp:29
+msgid "previous"
+msgstr "precedente"
+
+#: View/Areas/index.ctp:31 View/Beneficiaries/index.ctp:39
+#: View/Chapters/index.ctp:43 View/Commitments/index.ctp:45
+#: View/ContractGoods/index.ctp:37 View/ContractItems/index.ctp:47
+#: View/Contracts/index.ctp:47 View/Decrees/index.ctp:41
+#: View/ItemNames/index.ctp:45 View/ItemRows/index.ctp:63
+#: View/Managers/index.ctp:37 View/OrderItems/index.ctp:39
+#: View/Orders/index.ctp:41 View/People/index.ctp:33
+#: View/Services/index.ctp:31 View/SettlementItems/index.ctp:35
+#: View/Settlements/index.ctp:39 View/Types/index.ctp:31
+#: View/Usetypes/index.ctp:31
+msgid "next"
+msgstr "successivo"
+
+#: View/Areas/index.ctp:38 View/Areas/view.ctp:22 View/ItemNames/add.ctp:21
+#: View/ItemNames/edit.ctp:23 View/ItemNames/index.ctp:54
+#: View/ItemNames/view.ctp:44 View/ItemRows/add.ctp:31
+#: View/ItemRows/edit.ctp:33 View/ItemRows/index.ctp:76
+#: View/ItemRows/view.ctp:78
+msgid "New Area"
+msgstr "Nuova Area"
+
+#: View/Areas/view.ctp:2;9 View/ItemNames/view.ctp:14
+#: View/ItemRows/view.ctp:29
+msgid "Area"
+msgstr "Area"
+
+#: View/Areas/view.ctp:4;34;71 View/Beneficiaries/view.ctp:4;101;150;185
+#: View/Chapters/view.ctp:4;61;100 View/Commitments/view.ctp:4
+#: View/Contracts/view.ctp:4;148;218 View/Decrees/view.ctp:4;54;93
+#: View/ItemNames/view.ctp:4 View/ItemRows/view.ctp:4
+#: View/Managers/view.ctp:44 View/Orders/view.ctp:4 View/People/view.ctp:4
+#: View/Services/view.ctp:4;36;73 View/Settlements/view.ctp:4
+#: View/Types/view.ctp:4;32 View/Usetypes/view.ctp:4;36;73
+msgid "Id"
+msgstr "Id"
+
+#: View/Areas/view.ctp:20
+msgid "Delete Area"
+msgstr "Rimuovi Area"
+
+#: View/Areas/view.ctp:30 View/Services/view.ctp:32 View/Usetypes/view.ctp:32
+msgid "Related Item Names"
+msgstr "Item Correlati"
+
+#: View/Areas/view.ctp:35 View/ItemNames/view.ctp:9 View/Services/view.ctp:37
+#: View/Usetypes/view.ctp:37
+msgid "Name"
+msgstr "Nome"
+
+#: View/Areas/view.ctp:36;76 View/Beneficiaries/view.ctp:106
+#: View/Chapters/view.ctp:105 View/Services/view.ctp:38;78
+#: View/Types/view.ctp:37 View/Usetypes/view.ctp:38;78
+msgid "Area Id"
+msgstr "Area Id"
+
+#: View/Areas/view.ctp:37;77 View/Beneficiaries/view.ctp:107
+#: View/Chapters/view.ctp:106 View/Services/view.ctp:39;79;126
+#: View/Settlements/view.ctp:55 View/Types/view.ctp:38
+#: View/Usetypes/view.ctp:39;79;126
+msgid "Service Id"
+msgstr "Servizio Id"
+
+#: View/Areas/view.ctp:38;78 View/Beneficiaries/view.ctp:108
+#: View/Chapters/view.ctp:107 View/Services/view.ctp:40;80;127
+#: View/Settlements/view.ctp:56 View/Types/view.ctp:39
+#: View/Usetypes/view.ctp:40;80;127
+msgid "Usetype Id"
+msgstr "Uso Id"
+
+#: View/Areas/view.ctp:39 View/Chapters/view.ctp:64
+#: View/Commitments/view.ctp:19 View/Decrees/view.ctp:57
+#: View/ItemNames/view.ctp:29 View/Services/view.ctp:41
+#: View/Usetypes/view.ctp:41
+msgid "Codice Gestionale"
+msgstr "Codice Gestionale"
+
+#: View/Areas/view.ctp:67 View/Beneficiaries/view.ctp:97
+#: View/Chapters/view.ctp:96 View/Services/view.ctp:69 View/Types/view.ctp:28
+#: View/Usetypes/view.ctp:69
+msgid "Related Item Rows"
+msgstr "ItemPivot Correlati"
+
+#: View/Areas/view.ctp:72 View/Beneficiaries/view.ctp:102;186
+#: View/Chapters/view.ctp:101 View/ItemRows/view.ctp:9
+#: View/Services/view.ctp:74 View/Settlements/view.ctp:9
+#: View/Types/view.ctp:33 View/Usetypes/view.ctp:74
+msgid "Anno"
+msgstr "Anno"
+
+#: View/Areas/view.ctp:73 View/Beneficiaries/view.ctp:103
+#: View/Chapters/view.ctp:66;102 View/Decrees/view.ctp:59
+#: View/Services/view.ctp:75 View/Types/view.ctp:34 View/Usetypes/view.ctp:75
+msgid "Chapter Id"
+msgstr "Capitolo Id"
+
+#: View/Areas/view.ctp:74 View/Beneficiaries/view.ctp:104
+#: View/Chapters/view.ctp:103 View/Services/view.ctp:76 View/Types/view.ctp:35
+#: View/Usetypes/view.ctp:76
+msgid "Type Id"
+msgstr "Tipo id"
+
+#: View/Areas/view.ctp:75 View/Beneficiaries/view.ctp:66;105;154;189
+#: View/Chapters/view.ctp:67;104 View/Commitments/view.ctp:34;63
+#: View/ContractGoods/view.ctp:19 View/ContractItems/view.ctp:44
+#: View/Contracts/view.ctp:39;75;113;222 View/Decrees/view.ctp:60;100
+#: View/ItemRows/view.ctp:24 View/OrderItems/view.ctp:24
+#: View/Orders/view.ctp:24;55 View/Services/view.ctp:77
+#: View/SettlementItems/view.ctp:14 View/Settlements/view.ctp:24;90
+#: View/Types/view.ctp:36 View/Usetypes/view.ctp:77
+msgid "Importo"
+msgstr "Importo"
+
+#: View/Areas/view.ctp:79 View/Beneficiaries/view.ctp:109
+#: View/Chapters/view.ctp:108 View/ItemRows/view.ctp:44
+#: View/Services/view.ctp:81 View/Types/view.ctp:40 View/Usetypes/view.ctp:81
+msgid "Atto"
+msgstr "Atto"
+
+#: View/Areas/view.ctp:80 View/Beneficiaries/view.ctp:110
+#: View/ItemRows/view.ctp:49 View/Services/view.ctp:82 View/Types/view.ctp:41
+#: View/Usetypes/view.ctp:82
+msgid "N Impegno"
+msgstr "Numero Impegno"
+
+#: View/Areas/view.ctp:81 View/Beneficiaries/view.ctp:111
+#: View/ItemRows/view.ctp:54 View/Services/view.ctp:83 View/Types/view.ctp:42
+#: View/Usetypes/view.ctp:83
+msgid "A Impegno"
+msgstr "Anno Impegno"
+
+#: View/Areas/view.ctp:82 View/Beneficiaries/view.ctp:59;112;152;187
+#: View/Chapters/view.ctp:111 View/Contracts/view.ctp:106;220
+#: View/Services/view.ctp:84 View/Types/view.ctp:43 View/Usetypes/view.ctp:84
+msgid "Beneficiary Id"
+msgstr "Beneficiario Id"
+
+#: View/Beneficiaries/add.ctp:4
+msgid "Add Beneficiary"
+msgstr "Aggiungi Beneficiario"
+
+#: View/Beneficiaries/add.ctp:19 View/Beneficiaries/edit.ctp:21
+#: View/Beneficiaries/view.ctp:41 View/ContractItems/add.ctp:23
+#: View/ContractItems/edit.ctp:25 View/ContractItems/index.ctp:55
+#: View/ContractItems/view.ctp:58 View/ItemRows/add.ctp:36
+#: View/ItemRows/edit.ctp:38 View/ItemRows/index.ctp:81
+#: View/ItemRows/view.ctp:83 View/Orders/add.ctp:21 View/Orders/edit.ctp:23
+#: View/Orders/index.ctp:51 View/Orders/view.ctp:40
+#: View/Settlements/add.ctp:19 View/Settlements/edit.ctp:21
+#: View/Settlements/index.ctp:47 View/Settlements/view.ctp:38
+msgid "List Beneficiaries"
+msgstr "Elenco Beneficiari"
+
+#: View/Beneficiaries/add.ctp:20 View/Beneficiaries/edit.ctp:22
+#: View/Beneficiaries/index.ctp:47 View/Beneficiaries/view.ctp:43
+#: View/ContractItems/add.ctp:22 View/ContractItems/edit.ctp:24
+#: View/ContractItems/view.ctp:56 View/Contracts/add.ctp:28
+#: View/Contracts/edit.ctp:30 View/Contracts/index.ctp:61
+#: View/Contracts/view.ctp:59
+msgid "List Contract Items"
+msgstr "Elenco Item Contratto"
+
+#: View/Beneficiaries/add.ctp:21 View/Beneficiaries/edit.ctp:23
+#: View/Beneficiaries/index.ctp:48 View/Beneficiaries/view.ctp:44;92
+#: View/ContractItems/index.ctp:54 View/ContractItems/view.ctp:57
+#: View/Contracts/add.ctp:29 View/Contracts/edit.ctp:31
+#: View/Contracts/index.ctp:62 View/Contracts/view.ctp:60;139
+msgid "New Contract Item"
+msgstr "Nuovo Item Contratto"
+
+#: View/Beneficiaries/add.ctp:24 View/Beneficiaries/edit.ctp:26
+#: View/Beneficiaries/index.ctp:51 View/Beneficiaries/view.ctp:47
+#: View/Contracts/add.ctp:32 View/Contracts/edit.ctp:34
+#: View/Contracts/index.ctp:65 View/Contracts/view.ctp:63
+#: View/OrderItems/add.ctp:19 View/OrderItems/edit.ctp:21
+#: View/OrderItems/index.ctp:47 View/OrderItems/view.ctp:38
+#: View/Orders/add.ctp:18 View/Orders/edit.ctp:20 View/Orders/view.ctp:36
+msgid "List Orders"
+msgstr "Elenco Ordini"
+
+#: View/Beneficiaries/add.ctp:25 View/Beneficiaries/edit.ctp:27
+#: View/Beneficiaries/index.ctp:52 View/Beneficiaries/view.ctp:48;176
+#: View/Contracts/add.ctp:33 View/Contracts/edit.ctp:35
+#: View/Contracts/index.ctp:66 View/Contracts/view.ctp:64;244
+#: View/OrderItems/add.ctp:20 View/OrderItems/edit.ctp:22
+#: View/OrderItems/index.ctp:48 View/OrderItems/view.ctp:39
+#: View/Orders/index.ctp:48 View/Orders/view.ctp:37
+msgid "New Order"
+msgstr "Nuovo Ordine"
+
+#: View/Beneficiaries/add.ctp:26 View/Beneficiaries/edit.ctp:28
+#: View/Beneficiaries/index.ctp:53 View/Beneficiaries/view.ctp:49
+#: View/Settlements/add.ctp:18 View/Settlements/edit.ctp:20
+#: View/Settlements/view.ctp:36
+msgid "List Settlements"
+msgstr "Elenco Liquidazioni"
+
+#: View/Beneficiaries/add.ctp:27 View/Beneficiaries/edit.ctp:29
+#: View/Beneficiaries/index.ctp:54 View/Beneficiaries/view.ctp:50;211
+#: View/Settlements/index.ctp:46 View/Settlements/view.ctp:37
+msgid "New Settlement"
+msgstr "Nuova Liquidazione"
+
+#: View/Beneficiaries/edit.ctp:4 View/Beneficiaries/view.ctp:39
+msgid "Edit Beneficiary"
+msgstr "Modifica Beneficiario"
+
+#: View/Beneficiaries/index.ctp:2
+msgid "Beneficiaries"
+msgstr "Beneficiari"
+
+#: View/Beneficiaries/index.ctp:46 View/Beneficiaries/view.ctp:42
+#: View/ContractItems/add.ctp:24 View/ContractItems/edit.ctp:26
+#: View/ContractItems/index.ctp:56 View/ContractItems/view.ctp:59
+#: View/ItemRows/add.ctp:37 View/ItemRows/edit.ctp:39
+#: View/ItemRows/index.ctp:82 View/ItemRows/view.ctp:84 View/Orders/add.ctp:22
+#: View/Orders/edit.ctp:24 View/Orders/index.ctp:52 View/Orders/view.ctp:41
+#: View/Settlements/add.ctp:20 View/Settlements/edit.ctp:22
+#: View/Settlements/index.ctp:48 View/Settlements/view.ctp:39
+msgid "New Beneficiary"
+msgstr "Nuovo Beneficiario"
+
+#: View/Beneficiaries/view.ctp:2 View/ContractItems/view.ctp:9
+#: View/ItemRows/view.ctp:59 View/Orders/view.ctp:14
+#: View/Settlements/view.ctp:14
+msgid "Beneficiary"
+msgstr "Beneficiario"
+
+#: View/Beneficiaries/view.ctp:9
+msgid "Beneficiario"
+msgstr "Beneficiario"
+
+#: View/Beneficiaries/view.ctp:14
+msgid "Codice Cobil"
+msgstr "Codice Cobil"
+
+#: View/Beneficiaries/view.ctp:19
+msgid "Tipoente"
+msgstr "Tipo Ente"
+
+#: View/Beneficiaries/view.ctp:24
+msgid "Provincia"
+msgstr "Provincia"
+
+#: View/Beneficiaries/view.ctp:29
+msgid "Tipobeneficiario"
+msgstr "Tipo Beneficiario"
+
+#: View/Beneficiaries/view.ctp:40
+msgid "Delete Beneficiary"
+msgstr "Rimuovi Beneficiario"
+
+#: View/Beneficiaries/view.ctp:54 View/Contracts/view.ctp:101
+msgid "Related Contract Items"
+msgstr "Item Contratto Correlati "
+
+#: View/Beneficiaries/view.ctp:58;151 View/ContractGoods/view.ctp:4
+#: View/ContractItems/view.ctp:4 View/Contracts/view.ctp:72;105;152;186;219
+msgid "Contract Id"
+msgstr "Contratto Id"
+
+#: View/Beneficiaries/view.ctp:60 View/ContractItems/view.ctp:14
+#: View/Contracts/view.ctp:107
+msgid "Ruolo Beneficiario"
+msgstr "Ruolo Beneficiario"
+
+#: View/Beneficiaries/view.ctp:61 View/ContractItems/view.ctp:19
+#: View/Contracts/view.ctp:108
+msgid "Data Stipula"
+msgstr "Data Stipula"
+
+#: View/Beneficiaries/view.ctp:62 View/ContractItems/view.ctp:24
+#: View/Contracts/view.ctp:109
+msgid "Data Decorrenza"
+msgstr "Data Decorrenza"
+
+#: View/Beneficiaries/view.ctp:63 View/ContractItems/view.ctp:29
+#: View/Contracts/view.ctp:110
+msgid "Data Scadenza"
+msgstr "Data Scadenza"
+
+#: View/Beneficiaries/view.ctp:64 View/ContractItems/view.ctp:34
+#: View/Contracts/view.ctp:111
+msgid "Prorogabile"
+msgstr "Prorogabile"
+
+#: View/Beneficiaries/view.ctp:65 View/ContractItems/view.ctp:39
+#: View/Contracts/view.ctp:112
+msgid "Mesi Prorogata"
+msgstr "Mesi Prorogata"
+
+#: View/Beneficiaries/view.ctp:146 View/Contracts/view.ctp:214
+msgid "Related Orders"
+msgstr "Ordini Correlati"
+
+#: View/Beneficiaries/view.ctp:153 View/Contracts/view.ctp:221
+#: View/Orders/view.ctp:19
+msgid "Data Ordine"
+msgstr "Data Ordine"
+
+#: View/Beneficiaries/view.ctp:181
+msgid "Related Settlements"
+msgstr "Liquidazioni Correlate"
+
+#: View/Beneficiaries/view.ctp:188 View/Settlements/view.ctp:19
+msgid "Nota"
+msgstr "Nota"
+
+#: View/Chapters/add.ctp:4
+msgid "Add Chapter"
+msgstr "Aggiungi Capitolo"
+
+#: View/Chapters/add.ctp:20 View/Chapters/edit.ctp:22
+#: View/Chapters/view.ctp:46 View/Commitments/add.ctp:23
+#: View/Commitments/edit.ctp:25 View/Commitments/index.ctp:55
+#: View/Commitments/view.ctp:50 View/ItemRows/add.ctp:26
+#: View/ItemRows/edit.ctp:28 View/ItemRows/index.ctp:71
+#: View/ItemRows/view.ctp:73 View/Managers/add.ctp:20
+#: View/Managers/edit.ctp:22 View/Managers/index.ctp:47
+#: View/Managers/view.ctp:35
+msgid "List Chapters"
+msgstr "Elenco Capitoli"
+
+#: View/Chapters/add.ctp:21 View/Chapters/edit.ctp:23
+#: View/Chapters/index.ctp:51 View/Chapters/view.ctp:48
+#: View/Contracts/add.ctp:30 View/Contracts/edit.ctp:32
+#: View/Contracts/index.ctp:63 View/Contracts/view.ctp:61
+#: View/Managers/add.ctp:17 View/Managers/edit.ctp:19
+#: View/Managers/view.ctp:31
+msgid "List Managers"
+msgstr "Elenco Dirigenti"
+
+#: View/Chapters/add.ctp:22 View/Chapters/edit.ctp:24
+#: View/Chapters/index.ctp:52 View/Chapters/view.ctp:49
+#: View/Contracts/add.ctp:31 View/Contracts/edit.ctp:33
+#: View/Contracts/index.ctp:64 View/Contracts/view.ctp:62;209
+#: View/Managers/index.ctp:44 View/Managers/view.ctp:32
+msgid "New Manager"
+msgstr "Nuovo Dirigente"
+
+#: View/Chapters/add.ctp:23 View/Chapters/edit.ctp:25
+#: View/Chapters/index.ctp:53 View/Chapters/view.ctp:50
+#: View/Commitments/add.ctp:20 View/Commitments/edit.ctp:22
+#: View/Commitments/view.ctp:46 View/Decrees/add.ctp:22
+#: View/Decrees/edit.ctp:24 View/Decrees/index.ctp:51 View/Decrees/view.ctp:45
+#: View/SettlementItems/add.ctp:17 View/SettlementItems/edit.ctp:19
+#: View/SettlementItems/index.ctp:43 View/SettlementItems/view.ctp:28
+msgid "List Commitments"
+msgstr "Elenco Impegni"
+
+#: View/Chapters/add.ctp:24 View/Chapters/edit.ctp:26
+#: View/Chapters/index.ctp:54 View/Chapters/view.ctp:51;91
+#: View/Commitments/index.ctp:52 View/Commitments/view.ctp:47
+#: View/Decrees/add.ctp:23 View/Decrees/edit.ctp:25 View/Decrees/index.ctp:52
+#: View/Decrees/view.ctp:46;84 View/SettlementItems/add.ctp:18
+#: View/SettlementItems/edit.ctp:20 View/SettlementItems/index.ctp:44
+#: View/SettlementItems/view.ctp:29
+msgid "New Commitment"
+msgstr "Nuovo Impegno"
+
+#: View/Chapters/edit.ctp:4 View/Chapters/view.ctp:44
+msgid "Edit Chapter"
+msgstr "Modifica Capitolo"
+
+#: View/Chapters/index.ctp:2
+msgid "Chapters"
+msgstr "Capitoli"
+
+#: View/Chapters/index.ctp:50 View/Chapters/view.ctp:47
+#: View/Commitments/add.ctp:24 View/Commitments/edit.ctp:26
+#: View/Commitments/index.ctp:56 View/Commitments/view.ctp:51
+#: View/ItemRows/add.ctp:27 View/ItemRows/edit.ctp:29
+#: View/ItemRows/index.ctp:72 View/ItemRows/view.ctp:74
+#: View/Managers/add.ctp:21 View/Managers/edit.ctp:23
+#: View/Managers/index.ctp:48 View/Managers/view.ctp:36;74
+msgid "New Chapter"
+msgstr "Nuovo Capitolo"
+
+#: View/Chapters/view.ctp:2 View/Commitments/view.ctp:29
+#: View/ItemRows/view.ctp:14
+msgid "Chapter"
+msgstr "Capitolo"
+
+#: View/Chapters/view.ctp:9 View/Managers/view.ctp:45
+msgid "Upb"
+msgstr "Upb"
+
+#: View/Chapters/view.ctp:14 View/Contracts/view.ctp:153
+#: View/Decrees/view.ctp:29 View/Managers/view.ctp:46 View/Types/view.ctp:9
+msgid "Tipo"
+msgstr "Tipo"
+
+#: View/Chapters/view.ctp:19 View/Managers/view.ctp:47
+msgid "Spesa"
+msgstr "Spesa"
+
+#: View/Chapters/view.ctp:24 View/Managers/view.ctp:48
+msgid "Fondo"
+msgstr "Fondo"
+
+#: View/Chapters/view.ctp:29 View/Managers/view.ctp:49
+msgid "Capitolo"
+msgstr "Capitolo"
+
+#: View/Chapters/view.ctp:34 View/Managers/view.ctp:2
+msgid "Manager"
+msgstr "Dirigente"
+
+#: View/Chapters/view.ctp:45
+msgid "Delete Chapter"
+msgstr "Rimuovi Capitolo"
+
+#: View/Chapters/view.ctp:57 View/Decrees/view.ctp:50
+msgid "Related Commitments"
+msgstr "Impegni Correlati"
+
+#: View/Chapters/view.ctp:62;109 View/Commitments/view.ctp:9
+#: View/Decrees/view.ctp:55
+msgid "Numero Impegno"
+msgstr "Numero Impegno"
+
+#: View/Chapters/view.ctp:63;110 View/Commitments/view.ctp:14
+#: View/Decrees/view.ctp:56
+msgid "Anno Impegno"
+msgstr "Anno Impegno"
+
+#: View/Chapters/view.ctp:65 View/Decrees/view.ctp:58;97
+msgid "Decree Id"
+msgstr "Atto Id"
+
+#: View/Commitments/add.ctp:4
+msgid "Add Commitment"
+msgstr "Aggiungi Impegno"
+
+#: View/Commitments/add.ctp:21 View/Commitments/edit.ctp:23
+#: View/Commitments/index.ctp:53 View/Commitments/view.ctp:48
+#: View/Contracts/add.ctp:22 View/Contracts/edit.ctp:24
+#: View/Contracts/index.ctp:55 View/Contracts/view.ctp:53
+#: View/Decrees/add.ctp:19 View/Decrees/edit.ctp:21 View/Decrees/view.ctp:41
+msgid "List Decrees"
+msgstr "Elenco Atti"
+
+#: View/Commitments/add.ctp:22 View/Commitments/edit.ctp:24
+#: View/Commitments/index.ctp:54 View/Commitments/view.ctp:49
+#: View/Contracts/add.ctp:23 View/Contracts/edit.ctp:25
+#: View/Contracts/index.ctp:56 View/Contracts/view.ctp:54;176
+#: View/Decrees/index.ctp:48 View/Decrees/view.ctp:42
+msgid "New Decree"
+msgstr "Nuovo Atto"
+
+#: View/Commitments/add.ctp:25 View/Commitments/edit.ctp:27
+#: View/Commitments/index.ctp:57 View/Commitments/view.ctp:52
+#: View/SettlementItems/add.ctp:16 View/SettlementItems/edit.ctp:18
+#: View/SettlementItems/view.ctp:26 View/Settlements/add.ctp:23
+#: View/Settlements/edit.ctp:25 View/Settlements/index.ctp:51
+#: View/Settlements/view.ctp:42
+msgid "List Settlement Items"
+msgstr "Elenco Dettaglio Liquidazioni"
+
+#: View/Commitments/add.ctp:26 View/Commitments/edit.ctp:28
+#: View/Commitments/index.ctp:58 View/Commitments/view.ctp:53;83
+#: View/SettlementItems/index.ctp:42 View/SettlementItems/view.ctp:27
+#: View/Settlements/add.ctp:24 View/Settlements/edit.ctp:26
+#: View/Settlements/index.ctp:52 View/Settlements/view.ctp:43;110
+msgid "New Settlement Item"
+msgstr "Nuovo Dettaglio Liquidazioni"
+
+#: View/Commitments/edit.ctp:4 View/Commitments/view.ctp:44
+msgid "Edit Commitment"
+msgstr "Modifica Impegni"
+
+#: View/Commitments/index.ctp:2
+msgid "Commitments"
+msgstr "Impegni"
+
+#: View/Commitments/view.ctp:2 View/SettlementItems/view.ctp:9
+msgid "Commitment"
+msgstr "Impegni "
+
+#: View/Commitments/view.ctp:24 View/Contracts/view.ctp:24
+#: View/Decrees/view.ctp:2
+msgid "Decree"
+msgstr "Atto"
+
+#: View/Commitments/view.ctp:45
+msgid "Delete Commitment"
+msgstr "Rimuovi Impegno"
+
+#: View/Commitments/view.ctp:57 View/Settlements/view.ctp:84
+msgid "Related Settlement Items"
+msgstr "Dettaglio Liquidazioni Correlate"
+
+#: View/Commitments/view.ctp:61 View/Services/view.ctp:123
+#: View/SettlementItems/view.ctp:4 View/Settlements/view.ctp:52;88
+#: View/Usetypes/view.ctp:123
+msgid "Settlement Id"
+msgstr "Liquidazione Id"
+
+#: View/Commitments/view.ctp:62 View/Settlements/view.ctp:89
+msgid "Commitment Id"
+msgstr "Impegno Id"
+
+#: View/ContractGoods/add.ctp:4
+msgid "Add Contract Good"
+msgstr "Aggiungi Voce Contratto"
+
+#: View/ContractGoods/add.ctp:17 View/ContractGoods/edit.ctp:19
+#: View/ContractGoods/view.ctp:31 View/Contracts/add.ctp:26
+#: View/Contracts/edit.ctp:28 View/Contracts/index.ctp:59
+#: View/Contracts/view.ctp:57
+msgid "List Contract Goods"
+msgstr "Elenco Voci Contratto"
+
+#: View/ContractGoods/edit.ctp:4 View/ContractGoods/view.ctp:29
+msgid "Edit Contract Good"
+msgstr "Modifica Voce Contratto"
+
+#: View/ContractGoods/index.ctp:2
+msgid "Contract Goods"
+msgstr "Voci Contratto"
+
+#: View/ContractGoods/index.ctp:44 View/ContractGoods/view.ctp:32
+#: View/Contracts/add.ctp:27 View/Contracts/edit.ctp:29
+#: View/Contracts/index.ctp:60 View/Contracts/view.ctp:58;96
+msgid "New Contract Good"
+msgstr "Nuovo Voce Contratto"
+
+#: View/ContractGoods/view.ctp:2
+msgid "Contract Good"
+msgstr "Voce Contratto"
+
+#: View/ContractGoods/view.ctp:9 View/ItemNames/view.ctp:2
+msgid "Item Name"
+msgstr "Voce"
+
+#: View/ContractGoods/view.ctp:9 View/ItemNames/view.ctp:2
+msgid "Itemname"
+msgstr "Voce"
+
+#: View/ContractGoods/view.ctp:9 View/ItemNames/view.ctp:2
+msgid "Itemnames"
+msgstr "Voci"
+
+#: View/ContractGoods/view.ctp:14 View/Contracts/view.ctp:74
+msgid "Quantity"
+msgstr "Quantità "
+
+#: View/ContractGoods/view.ctp:30
+msgid "Delete Contract Good"
+msgstr "Rimuovi"
+
+#: View/ContractItems/add.ctp:4
+msgid "Add Contract Item"
+msgstr "Aggiungi Item Contratto"
+
+#: View/ContractItems/edit.ctp:4 View/ContractItems/view.ctp:54
+msgid "Edit Contract Item"
+msgstr "Modifica Item Contratto"
+
+#: View/ContractItems/index.ctp:2
+msgid "Contract Items"
+msgstr "Item Contratto"
+
+#: View/ContractItems/view.ctp:2
+msgid "Contract Item"
+msgstr "Item Contratto"
+
+#: View/ContractItems/view.ctp:55
+msgid "Delete Contract Item"
+msgstr "Rimuovi Item Contratto"
+
+#: View/Contracts/add.ctp:4
+msgid "Add Contract"
+msgstr "Aggiungi Contratto"
+
+#: View/Contracts/add.ctp:21 View/Contracts/edit.ctp:23
+#: View/Contracts/view.ctp:51 View/Decrees/add.ctp:20 View/Decrees/edit.ctp:22
+#: View/Decrees/index.ctp:49 View/Decrees/view.ctp:43 View/Managers/add.ctp:18
+#: View/Managers/edit.ctp:20 View/Managers/index.ctp:45
+#: View/Managers/view.ctp:33 View/Orders/add.ctp:19 View/Orders/edit.ctp:21
+#: View/Orders/index.ctp:49 View/Orders/view.ctp:38
+msgid "List Contracts"
+msgstr "Elenco Contratti"
+
+#: View/Contracts/add.ctp:24 View/Contracts/edit.ctp:26
+#: View/Contracts/index.ctp:57 View/Contracts/view.ctp:55
+msgid "List Executives"
+msgstr "Elenco Referenti"
+
+#: View/Contracts/add.ctp:25 View/Contracts/edit.ctp:27
+#: View/Contracts/index.ctp:58 View/Contracts/view.ctp:56
+msgid "New Executive"
+msgstr "Nuovo Referente"
+
+#: View/Contracts/edit.ctp:4 View/Contracts/view.ctp:49
+msgid "Edit Contract"
+msgstr "Modifica Contratto"
+
+#: View/Contracts/index.ctp:2
+msgid "Contracts"
+msgstr "Contratti"
+
+#: View/Contracts/index.ctp:54 View/Contracts/view.ctp:52
+#: View/Decrees/add.ctp:21 View/Decrees/edit.ctp:23 View/Decrees/index.ctp:50
+#: View/Decrees/view.ctp:44;125 View/Managers/add.ctp:19
+#: View/Managers/edit.ctp:21 View/Managers/index.ctp:46
+#: View/Managers/view.ctp:34 View/Orders/add.ctp:20 View/Orders/edit.ctp:22
+#: View/Orders/index.ctp:50 View/Orders/view.ctp:39
+msgid "New Contract"
+msgstr "Nuovo Contratto"
+
+#: View/Contracts/view.ctp:2 View/Decrees/view.ctp:24 View/Managers/view.ctp:9
+#: View/Orders/view.ctp:9
+msgid "Contract"
+msgstr "Contratto"
+
+#: View/Contracts/view.ctp:9 View/Decrees/view.ctp:94
+msgid "Oggetto"
+msgstr "Oggetto"
+
+#: View/Contracts/view.ctp:14 View/Decrees/view.ctp:95
+msgid "Cig"
+msgstr "CIG"
+
+#: View/Contracts/view.ctp:19 View/Decrees/view.ctp:96
+msgid "Cup"
+msgstr "CUP"
+
+#: View/Contracts/view.ctp:29 View/Decrees/view.ctp:98
+msgid "Affidamento"
+msgstr "Affidamento"
+
+#: View/Contracts/view.ctp:34
+msgid "Executive"
+msgstr "Referente"
+
+#: View/Contracts/view.ctp:50
+msgid "Delete Contract"
+msgstr "Rimuovi Contratto"
+
+#: View/Contracts/view.ctp:68
+msgid "Related Contract Goods"
+msgstr "Voci Contratto Correlate"
+
+#: View/Contracts/view.ctp:73 View/Services/view.ctp:124
+#: View/Settlements/view.ctp:53 View/Usetypes/view.ctp:124
+msgid "Itemname Id"
+msgstr "Voce Id"
+
+#: View/Contracts/view.ctp:144
+msgid "Related Decrees"
+msgstr "Atti Correlati"
+
+#: View/Contracts/view.ctp:149 View/Decrees/view.ctp:9
+#: View/OrderItems/view.ctp:19 View/Orders/view.ctp:54
+msgid "Descrizione"
+msgstr "Descrizione"
+
+#: View/Contracts/view.ctp:150 View/Decrees/view.ctp:14
+msgid "Numero"
+msgstr "Numero"
+
+#: View/Contracts/view.ctp:151 View/Decrees/view.ctp:19
+msgid "Data"
+msgstr "Data"
+
+#: View/Contracts/view.ctp:181
+msgid "Related Managers"
+msgstr "Dirigenti Correlati"
+
+#: View/Contracts/view.ctp:185 View/Managers/view.ctp:4
+msgid "People Id"
+msgstr "Matricola"
+
+#: View/Contracts/view.ctp:187 View/Managers/view.ctp:14
+msgid "Data_dal"
+msgstr "Data dal"
+
+#: View/Contracts/view.ctp:188 View/Managers/view.ctp:19
+msgid "Data Al"
+msgstr "Data al"
+
+#: View/Decrees/add.ctp:4
+msgid "Add Decree"
+msgstr "Aggiungi Atto"
+
+#: View/Decrees/edit.ctp:4 View/Decrees/view.ctp:39
+msgid "Edit Decree"
+msgstr "Modifica Atto"
+
+#: View/Decrees/index.ctp:2
+msgid "Decrees"
+msgstr "Atti"
+
+#: View/Decrees/view.ctp:40
+msgid "Delete Decree"
+msgstr "Rimuovi Atto"
+
+#: View/Decrees/view.ctp:89
+msgid "Related Contracts"
+msgstr "Contratti Correlati"
+
+#: View/Decrees/view.ctp:99
+msgid "Executive Id"
+msgstr "Referente"
+
+#: View/ItemNames/add.ctp:4
+msgid "Add Item Name"
+msgstr "Aggiungi Voce"
+
+#: View/ItemNames/add.ctp:22 View/ItemNames/edit.ctp:24
+#: View/ItemNames/index.ctp:55 View/ItemNames/view.ctp:45
+#: View/ItemRows/add.ctp:32 View/ItemRows/edit.ctp:34
+#: View/ItemRows/index.ctp:77 View/ItemRows/view.ctp:79
+#: View/Services/add.ctp:15 View/Services/edit.ctp:17
+#: View/Services/view.ctp:21
+msgid "List Services"
+msgstr "Elenca Servizi"
+
+#: View/ItemNames/add.ctp:23 View/ItemNames/edit.ctp:25
+#: View/ItemNames/index.ctp:56 View/ItemNames/view.ctp:46
+#: View/ItemRows/add.ctp:33 View/ItemRows/edit.ctp:35
+#: View/ItemRows/index.ctp:78 View/ItemRows/view.ctp:80
+#: View/Services/index.ctp:38 View/Services/view.ctp:22
+msgid "New Service"
+msgstr "Nuovo Servizio"
+
+#: View/ItemNames/add.ctp:24 View/ItemNames/edit.ctp:26
+#: View/ItemNames/index.ctp:57 View/ItemNames/view.ctp:47
+#: View/ItemRows/add.ctp:34 View/ItemRows/edit.ctp:36
+#: View/ItemRows/index.ctp:79 View/ItemRows/view.ctp:81
+#: View/Usetypes/add.ctp:15 View/Usetypes/edit.ctp:17
+#: View/Usetypes/view.ctp:21
+msgid "List Usetypes"
+msgstr "Elenco Usi"
+
+#: View/ItemNames/add.ctp:25 View/ItemNames/edit.ctp:27
+#: View/ItemNames/index.ctp:58 View/ItemNames/view.ctp:48
+#: View/ItemRows/add.ctp:35 View/ItemRows/edit.ctp:37
+#: View/ItemRows/index.ctp:80 View/ItemRows/view.ctp:82
+#: View/Usetypes/index.ctp:38 View/Usetypes/view.ctp:22
+msgid "New Usetype"
+msgstr "Nuovo Uso"
+
+#: View/ItemNames/edit.ctp:4 View/ItemNames/view.ctp:39
+msgid "Edit Item Name"
+msgstr "Modifica Voce"
+
+#: View/ItemNames/index.ctp:2
+msgid "Item Names"
+msgstr "Voce"
+
+#: View/ItemNames/view.ctp:19 View/ItemRows/view.ctp:34
+#: View/Services/view.ctp:2
+msgid "Service"
+msgstr "Servizio"
+
+#: View/ItemNames/view.ctp:24 View/ItemRows/view.ctp:39
+#: View/Usetypes/view.ctp:2
+msgid "Usetype"
+msgstr "Uso"
+
+#: View/ItemNames/view.ctp:40
+msgid "Delete Item Name"
+msgstr "Rimuovi Voce"
+
+#: View/ItemRows/add.ctp:4
+msgid "Add Item Row"
+msgstr "Aggiungi ItemPivot"
+
+#: View/ItemRows/add.ctp:28 View/ItemRows/edit.ctp:30
+#: View/ItemRows/index.ctp:73 View/ItemRows/view.ctp:75 View/Types/add.ctp:15
+#: View/Types/edit.ctp:17 View/Types/view.ctp:21
+msgid "List Types"
+msgstr "Elenco Tipi"
+
+#: View/ItemRows/add.ctp:29 View/ItemRows/edit.ctp:31
+#: View/ItemRows/index.ctp:74 View/ItemRows/view.ctp:76
+#: View/Types/index.ctp:38 View/Types/view.ctp:22
+msgid "New Type"
+msgstr "Nuovo Tipo"
+
+#: View/ItemRows/edit.ctp:4 View/ItemRows/view.ctp:69
+msgid "Edit Item Row"
+msgstr "Modifica ItemPivo"
+
+#: View/ItemRows/index.ctp:2
+msgid "Item Rows"
+msgstr "Item Pivot"
+
+#: View/ItemRows/view.ctp:2
+msgid "Item Row"
+msgstr "Item Pivot"
+
+#: View/ItemRows/view.ctp:19 View/Types/view.ctp:2
+msgid "Type"
+msgstr "Tipo"
+
+#: View/ItemRows/view.ctp:70
+msgid "Delete Item Row"
+msgstr "Rimuovi ItemPivot"
+
+#: View/Managers/add.ctp:4
+msgid "Add Manager"
+msgstr "Aggiungi Dirigente"
+
+#: View/Managers/edit.ctp:4 View/Managers/view.ctp:29
+msgid "Edit Manager"
+msgstr "Modifica Dirigente"
+
+#: View/Managers/index.ctp:2
+msgid "Managers"
+msgstr "Dirigenti"
+
+#: View/Managers/view.ctp:30
+msgid "Delete Manager"
+msgstr "Rimuovi Dirigente"
+
+#: View/Managers/view.ctp:40
+msgid "Related Chapters"
+msgstr "Capitoli Correlati"
+
+#: View/Managers/view.ctp:50
+msgid "Manager Id"
+msgstr "Dirigente"
+
+#: View/OrderItems/add.ctp:4
+msgid "Add Order Item"
+msgstr "Aggiungi Item Ordine"
+
+#: View/OrderItems/add.ctp:18 View/OrderItems/edit.ctp:20
+#: View/OrderItems/view.ctp:36 View/Orders/add.ctp:23 View/Orders/edit.ctp:25
+#: View/Orders/index.ctp:53 View/Orders/view.ctp:42
+msgid "List Order Items"
+msgstr "Elenco Item Ordine"
+
+#: View/OrderItems/edit.ctp:4 View/OrderItems/view.ctp:34
+msgid "Edit Order Item"
+msgstr "Modifica Item Ordine"
+
+#: View/OrderItems/index.ctp:2
+msgid "Order Items"
+msgstr "Item Ordine"
+
+#: View/OrderItems/index.ctp:46 View/OrderItems/view.ctp:37
+#: View/Orders/add.ctp:24 View/Orders/edit.ctp:26 View/Orders/index.ctp:54
+#: View/Orders/view.ctp:43;77
+msgid "New Order Item"
+msgstr "Nuovo Item Ordine"
+
+#: View/OrderItems/view.ctp:2
+msgid "Order Item"
+msgstr "Item Ordine"
+
+#: View/OrderItems/view.ctp:4 View/Orders/view.ctp:51
+msgid "Riga"
+msgstr "Riga"
+
+#: View/OrderItems/view.ctp:9 View/Orders/view.ctp:2
+msgid "Order"
+msgstr "Ordine"
+
+#: View/OrderItems/view.ctp:14 View/Orders/view.ctp:53
+msgid "Item"
+msgstr "Item"
+
+#: View/OrderItems/view.ctp:35
+msgid "Delete Order Item"
+msgstr "Rimuovi Item Ordine"
+
+#: View/Orders/add.ctp:4
+msgid "Add Order"
+msgstr "Aggiungi Ordine"
+
+#: View/Orders/edit.ctp:4 View/Orders/view.ctp:34
+msgid "Edit Order"
+msgstr "Modifica Ordine"
+
+#: View/Orders/index.ctp:2
+msgid "Orders"
+msgstr "Ordini"
+
+#: View/Orders/view.ctp:35
+msgid "Delete Order"
+msgstr "Rimuovi Ordine"
+
+#: View/Orders/view.ctp:47
+msgid "Related Order Items"
+msgstr "Item Ordine Correlati"
+
+#: View/Orders/view.ctp:52
+msgid "Order Id"
+msgstr "Ordine Id"
+
+#: View/People/add.ctp:4
+msgid "Add Person"
+msgstr "Aggiunge Persona"
+
+#: View/People/add.ctp:16 View/People/edit.ctp:18 View/People/view.ctp:26
+msgid "List People"
+msgstr "Elenco Persone"
+
+#: View/People/edit.ctp:4 View/People/view.ctp:24
+msgid "Edit Person"
+msgstr "Modifica Persona"
+
+#: View/People/index.ctp:2
+msgid "People"
+msgstr "Persone"
+
+#: View/People/index.ctp:40 View/People/view.ctp:27
+msgid "New Person"
+msgstr "Nuova Persona"
+
+#: View/People/view.ctp:2
+msgid "Person"
+msgstr "Persona"
+
+#: View/People/view.ctp:9
+msgid "Cognome"
+msgstr "Cognome"
+
+#: View/People/view.ctp:14
+msgid "Nome"
+msgstr "Nome"
+
+#: View/People/view.ctp:25
+msgid "Delete Person"
+msgstr "Rimuovi  Persona"
+
+#: View/Services/add.ctp:4
+msgid "Add Service"
+msgstr "Aggiungi Servizio"
+
+#: View/Services/add.ctp:20 View/Services/edit.ctp:22
+#: View/Services/index.ctp:43 View/Services/view.ctp:27
+#: View/Settlements/add.ctp:21 View/Settlements/edit.ctp:23
+#: View/Settlements/index.ctp:49 View/Settlements/view.ctp:40
+#: View/Usetypes/add.ctp:20 View/Usetypes/edit.ctp:22
+#: View/Usetypes/index.ctp:43 View/Usetypes/view.ctp:27
+msgid "List Items"
+msgstr "Elenca Item"
+
+#: View/Services/add.ctp:21 View/Services/edit.ctp:23
+#: View/Services/index.ctp:44 View/Services/view.ctp:28;150
+#: View/Settlements/add.ctp:22 View/Settlements/edit.ctp:24
+#: View/Settlements/index.ctp:50 View/Settlements/view.ctp:41;79
+#: View/Usetypes/add.ctp:21 View/Usetypes/edit.ctp:23
+#: View/Usetypes/index.ctp:44 View/Usetypes/view.ctp:28;150
+msgid "New Item"
+msgstr "Nuovo Item"
+
+#: View/Services/edit.ctp:4 View/Services/view.ctp:19
+msgid "Edit Service"
+msgstr "Modifica Servizio"
+
+#: View/Services/index.ctp:2
+msgid "Services"
+msgstr "Servizi"
+
+#: View/Services/view.ctp:9
+msgid "Servizio"
+msgstr "Servizio"
+
+#: View/Services/view.ctp:20
+msgid "Delete Service"
+msgstr "Rimuovi Servizio"
+
+#: View/Services/view.ctp:118 View/Settlements/view.ctp:47
+#: View/Usetypes/view.ctp:118
+msgid "Related Items"
+msgstr "Items Correlati"
+
+#: View/Services/view.ctp:122 View/Settlements/view.ctp:51
+#: View/Usetypes/view.ctp:122
+msgid "Invoice Id"
+msgstr "Fattuara Id"
+
+#: View/Services/view.ctp:125 View/Settlements/view.ctp:54
+#: View/Usetypes/view.ctp:125
+msgid "Areea Id"
+msgstr "Area Id"
+
+#: View/SettlementItems/add.ctp:4
+msgid "Add Settlement Item"
+msgstr "Aggiungi Item Liquidazione"
+
+#: View/SettlementItems/edit.ctp:4 View/SettlementItems/view.ctp:24
+msgid "Edit Settlement Item"
+msgstr "Modifica Item Liquidazione"
+
+#: View/SettlementItems/index.ctp:2
+msgid "Settlement Items"
+msgstr "Items Liquidazione"
+
+#: View/SettlementItems/view.ctp:2
+msgid "Settlement Item"
+msgstr "Item Liquidazione"
+
+#: View/SettlementItems/view.ctp:25
+msgid "Delete Settlement Item"
+msgstr "Rimuovi Item Liquidazione"
+
+#: View/Settlements/add.ctp:4
+msgid "Add Settlement"
+msgstr "Aggiungi Liquidazione"
+
+#: View/Settlements/edit.ctp:4 View/Settlements/view.ctp:34
+msgid "Edit Settlement"
+msgstr "Modifica Liquidazione"
+
+#: View/Settlements/index.ctp:2
+msgid "Settlements"
+msgstr "Liquidazioni"
+
+#: View/Settlements/view.ctp:2
+msgid "Settlement"
+msgstr "Liquidazione"
+
+#: View/Settlements/view.ctp:35
+msgid "Delete Settlement"
+msgstr "Rimuovi Liquidazione"
+
+#: View/Types/add.ctp:4
+msgid "Add Type"
+msgstr "Aggiungi Tipo"
+
+#: View/Types/edit.ctp:4 View/Types/view.ctp:19
+msgid "Edit Type"
+msgstr "Modifica Tipo"
+
+#: View/Types/index.ctp:2
+msgid "Types"
+msgstr "Tipi"
+
+#: View/Types/view.ctp:20
+msgid "Delete Type"
+msgstr "Modifica Tipo"
+
+#: View/Usetypes/add.ctp:4
+msgid "Add Usetype"
+msgstr "Aggiungi Uso"
+
+#: View/Usetypes/edit.ctp:4 View/Usetypes/view.ctp:19
+msgid "Edit Usetype"
+msgstr "Modifica Uso"
+
+#: View/Usetypes/index.ctp:2
+msgid "Usetypes"
+msgstr "Uso"
+
+#: View/Usetypes/view.ctp:9
+msgid "Uso"
+msgstr "Uso"
+
+#: View/Usetypes/view.ctp:20
+msgid "Delete Usetype"
+msgstr "Rimuovi Uso"
+
+#: Model/Commitment.php:validation for field numero_impegno;validation
+#: anno_impegno;validation decree_id;validation chapter_id;validation importo
+#: Model/Contract.php:validation executive_id
+#: Model/ContractGood.php:validation itemname_id
+#: Model/ContractItem.php:validation beneficiary_id;validation mesi_prorogata
+#: Model/Item.php:validation settlement_id Model/Manager.php:validation
+#: contract_id Model/Order.php:validation contract_id;validation
+#: beneficiary_id Model/OrderItem.php:validation order_id
+#: Model/Settlement.php:validation Model/SettlementItem.php:validation
+#: commitment_id
+msgid "numeric"
+msgstr "numeric"
+
+#: Model/Contract.php:validation for field cig;validation tipo_contratto
+#: Model/ContractItem.php:validation ruolo_beneficiario;validation prorogabile
+msgid "notEmpty"
+msgstr "notEmpty"
+
+#: Model/Manager.php:validation for field data_dal Model/Order.php:validation
+#: data_ordine
+msgid "date"
+msgstr "date"
+
+#: Model/Executive.php
+msgid "Executives"
+msgstr "Referenti"
+
+#: Model/ContractType.php
+msgid "Contracttype"
+msgstr "Affidamento"
+
+#: Model/ContractType.php
+msgid "Contracttypes"
+msgstr "Affidamenti"
+
+#: Model/Accountants.php
+msgid "Accountant"
+msgstr "Amministrativo"
+
+#: Model/Accountants.php
+msgid "Accountants"
+msgstr "Amministrativi"
+
+#: Model/Accountants.php
+msgid "List Contract Types"
+msgstr "Elenco Affidamenti"
+
+#: Model/Accountants.php
+msgid "New Contract Type"
+msgstr "Nuovo Affidamento"
+
+#: Model/Accountants.php
+msgid "Contract Types"
+msgstr "Affidamento"
+
+#: Model/Accountants.php
+msgid "List Accountants"
+msgstr "Elenco Amministrativi"
+
+#: Model/Accountants.php
+msgid "New Accountant"
+msgstr "Nuovo Amministrativo"
+
+#: Model/Accountants.php
+msgid "New Invoice"
+msgstr "Nuova Fattura"
+
+#: Model/Accountants.php
+msgid "List Invoices"
+msgstr "Lista Fatture"
+
+#: Model/Accountants.php
+msgid "Contracttype Id"
+msgstr "Affidamento"
+
+#: Model/Accountants.php
+msgid "Contract Type"
+msgstr "Affidamento"
+
+#: Model/Accountants.php
+msgid "Edit Contract Type"
+msgstr "Modifica Affidamento"
+
+#: Model/Accountants.php
+msgid "Delete Contract Type"
+msgstr "Rimuovi Affidamento"
+
+msgid "List Beneficiary Roles"
+msgstr "Lista Ruoli"
+
+#: Model/Accountants.php
+msgid "Beneficiary Role"
+msgstr "Ruolo"
+
+#: Model/Accountants.php
+msgid "Beneficiary Roles"
+msgstr "Ruoli"
+
+#: Model/Accountants.php
+msgid "New Beneficiary Role"
+msgstr "Nuovo Ruolo"
+
+#: Model/Accountants.php
+msgid "Beneficiaryrole Id"
+msgstr "Ruolo"
+
+#: Model/Accountants.php
+msgid "Edit Beneficiary Role"
+msgstr "Modifica Ruolo"
+
+#: Model/Accountants.php
+msgid "Delete Beneficiary Role"
+msgstr "Rimuovi Ruolo"
+
+#: Model/Accountants.php
+msgid "Accountant Id"
+msgstr "Amministrativo"
+
+#: Model/Accountants.php
+msgid "Beneficiaryrole"
+msgstr "Ruolo"
+
+#: Model/Accountants.php
+msgid "Search"
+msgstr "Trova"
+
+#: Model/Accountants.php
+msgid "Invoices"
+msgstr "Fatture"
+
+#: Model/Accountants.php
+msgid "Invoice"
+msgstr "Fattura"
+
+msgid "Cars"
+msgstr "Auto"

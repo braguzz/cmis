@@ -1,0 +1,19 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-01-16 13:04+0100\n"
+"PO-Revision-Date: 2014-06-03 14:56+0100\n"
+"Last-Translator: Angelo Marcotulli <angelo.marcotulli@regione.toscana.it>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /Plugin/search/Controller/Component/PrgComponent.php:402
+msgid "Please correct the errors below."
+msgstr "Prego correggere gli errori seguenti."
+

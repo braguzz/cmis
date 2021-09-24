@@ -1,0 +1,66 @@
+Authorization
+
+Authentication
+
+
+Baking
+ho fatto un plugin RtBake con comando apposito che costruisce il prlugin e mette tutto in composer
+lo scopo e' inserire tutto in questo plugin.
+(https://book.cakephp.org/bake/2/en/development.html#creating-a-bake-theme)
+(
+Bake a new plugin. The name of the plugin is the bake ‘theme’ name. For example bin/cake bake plugin custom_bake.
+Create a new directory plugins/CustomBake/templates/bake.
+Copy any templates you want to override from vendor/cakephp/bake/templates/bake to matching files in your plugin
+)
+
+dentro \plugins\RtBake\templates\bake\Template
+ci vanno i twig delle viste (add.twig, edit.twig, ecc..)
+
+in \plugins\RtBake\templates\bake\element\Controller
+ci vanno i twig delle varie azioni del controller
+
+poi si cucina con (il -t indica il 'tema' e lo va a prendere dal plugin RtBake)
+ bin/cake bake all Libri -t RtBake
+
+
+Dentro:
+\plugins\RtBake\templates\bake\policy.twig
+\plugins\RtBake\templates\bake\element\entity_methods.twig
+
+ci vanno i template per le politiche di autorizzazione
+poi bisogna cucinarle con:
+
+ bin/cake bake policy Libro -t RtBake
+
+
+---------------------------
+Ajax
+
+PEr le chiamate ajax ho disabilitato questo
+
+// Cross Site Request Forgery (CSRF) Protection Middleware
+            // https://book.cakephp.org/4/en/controllers/middleware.html#cross-site-request-forgery-csrf-middleware
+        /*    ->add(new CsrfProtectionMiddleware([
+               'httponly' => false,
+            ]))*/
+
+ma bisogna trovare il modo di rimetterlo
+
+
+
+----------------------
+Per cucinare il tutto:
+copiare la cartella
+     cp -r ./cake4source ./miaapp
+
+andare sul folder
+     cd miaapp
+
+cambiare il DB in config/app_locl.php
+
+dare a init.sh i permessi di esecuzione
+     sudo chmod +x init.sh 
+
+lanciare lo script
+    ./init.sh
+----------------------

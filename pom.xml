@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.toscana.regione</groupId>
-	<artifactId>rubrica</artifactId>
+	<artifactId>ac20cake4</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>Rubrica</name>
+	<name>ac20cake4</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!-- CONFIGURA QUA LE DIPENDENZE -->

@@ -1,0 +1,96 @@
+-------------------------------------------------------------------------------------------------------------------
+
+BakePlugin:
+	nome		RtBake
+	versione	B01.005
+	data 		
+	by     		Braga 
+
+CHANGELOG:
+        - Sistemati alcuni Bug minori
+        - Sistemato Bug di add e edit tabella Users
+
+TO DO:
+
+	- Charts in ReportSql
+        - sistemare i template delle tabelle Users e Roles
+
+BUG CONOSCIUTI:
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+BakePlugin:
+	nome		RtBake
+	versione	B01.004
+	data 		
+	by     		Braga 
+
+CHANGELOG:
+        - Menu
+        - ReportSql
+        - Cambiata la doAcSelect2 ora permette la ricerca con 0 caratteri e pagina i riultati
+
+TO DO:
+
+	- Charts in ReportSql
+
+BUG CONOSCIUTI:
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+BakePlugin:
+	nome		RtBake
+	versione	B01.003
+	data 		
+	by     		Braga 
+
+CHANGELOG:
+        - pagina iniziale per utenti inattivi
+
+TO DO:
+	- Menu
+	- ReportSQL
+
+BUG CONOSCIUTI:
+
+-------------------------------------------------------------------------------------------------------------------
+
+BakePlugin:
+	nome		RtBake
+	versione	B1.02
+	data 		04/08/2021
+	by     		Braga 
+
+CHANGELOG:
+        - sistemato errore in edit che non permetteva di salvare
+        - inserito automaticamente SelectAC2 anche per i campi HABTM
+        - sistemato add_ajax_belong
+        - sistemato il bug in select che non prendeva automaticamente i required
+TO DO:
+	- Menu
+	- Bottoni in alto in tutte le viste 
+	- ReportSQL
+
+BUG CONOSCIUTI:
+
+-------------------------------------------------------------------------------------------------------------------
+
+BakePlugin:
+	nome		RtBake
+	versione	B1.01
+	data 		29/07/2021
+	by     		Braga 
+
+CHANGELOG:
+        - Prima versione basata su CakePHP4
+TO DO:
+	- Menu
+	- Bottoni in alto in tutte le viste 
+	- ReportSQL
+        - Prefix nelle tabelle
+
+BUG CONOSCIUTI:
+
+-------------------------------------------------------------------------------------------------------------------

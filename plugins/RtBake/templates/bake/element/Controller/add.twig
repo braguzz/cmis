@@ -1,0 +1,98 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+{% set belongsTo = Bake.aliasExtractor(modelObj, 'BelongsTo') %}
+{% set belongsToMany = Bake.aliasExtractor(modelObj, 'belongsToMany') %}
+{% set compact = ["'#{singularName}'"] %}
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     */
+    public function add()
+    {
+        ${{ singularName }} = $this->{{ currentModelName }}->newEmptyEntity();
+        $this->Authorization->authorize(${{ singularName }});
+        
+        $return=$this->request->getData();
+        if (empty($return['returncontroller']))
+        {         $return['returncontrollerid']="";
+                  $return['returnaction']="";
+                  $return['returncontroller']="";
+                  $return['returnsaveme']="";
+        }
+        $this->set('return',$return);     
+    
+{% set associations = Bake.aliasExtractor(modelObj, 'BelongsTo') %}
+{% set associations = associations|merge(Bake.aliasExtractor(modelObj, 'BelongsToMany')) %}
+
+{%- for assoc in associations %}
+    {%- set otherName = Bake.getAssociatedTableAlias(modelObj, assoc) %}
+    {%- set otherPlural = otherName|variable %}
+        {%- if otherName in Bake.exportArray(belongsToMany)|raw %}
+        ${{ otherPlural }} = $this->{{ currentModelName }}->{{ otherName }}->find('list', ['limit' => 200]);
+         {%- else %}
+         ${{ otherPlural }} = $this->{{ currentModelName }}->{{ otherName }}->find('list', ['limit' => 0]);
+        {%- endif %}  
+        {{- "\n" }}
+    {%- set compact = compact|merge(["'#{otherPlural}'"]) %}
+{% endfor %}
+        $this->set(compact({{ compact|join(', ')|raw }}));
+
+        // se e' ajax proviene da un add di un altra tabella
+        if ($this->request->is('ajax')) {
+                $return = $this->request->getParam('pass');
+                $this->render('addAjaxBelong');
+            } 
+        else if ($this->request->is(array('post', 'put')) && in_array($return['returnsaveme'],["",1,"1"] )) 
+         {
+            ${{ singularName }} = $this->{{ currentModelName }}->patchEntity(${{ singularName }}, $this->request->getData());
+            if ($this->{{ currentModelName }}->save(${{ singularName }})) {
+
+  
+                $this->Flash->success(__('The {{ singularHumanName|lower }} stato salvato.'));                              
+                 if ($return['returncontrollerid']<>"")
+                    {    
+                    //se $return['returncontrollerid'] non e' vuoto significa che sono qui dalla view di un altra tabella
+                    //prendo l'id e il controller che passo nel form e faccio un redirect su quell id, controller e tab di provenienza
+                    $id=$return['returncontrollerid'];
+                    $action=$return['returnaction'];
+                    $controller=$return['returncontroller'];
+                    return $this->redirect(array('action' =>$action,'controller'=>$controller, $id, 'tab' => '${{ singularName }}'));
+                    }
+                  else
+                    {
+                        //redirezione in base al bottone premuto -
+                        if(isset($return['submit_ok'])) return $this->redirect(array('action' => 'index'));
+                        if(isset($return['submit_ok_piu'])) return $this->redirect(array('action' => 'add'));
+                        if(isset($return['submit_ok_mod'])) return $this->redirect(array('action' => 'view', ${{ singularName }}->id));   
+                   
+                    } 
+
+            } 
+            else 
+            {
+                $this->Flash->error(__('{{ singularName }} non puo\' essere salvato, riprova'));
+      
+            }
+        }  
+        
+        
+        
+        
+        
+        
+        
+    }

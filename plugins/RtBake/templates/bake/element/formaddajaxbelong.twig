@@ -1,0 +1,98 @@
+
+<div class="card bg-light">
+<div class="{{ pluralVar }} form content card-body">
+
+     <?= $this->Form->create(${{ singularVar }},['id'=>'add{{ pluralVar }}','url' => false]);   
+      $this->Form->setConfig('autoSetCustomValidity', false);
+      ?>
+    <fieldset>
+        <?php
+{% for field in fields %}
+    
+{%- if field not in primaryKey %}
+    {%- if keyFields[field] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+       
+        {%- if fieldData.null %}
+          {%- endif %}    
+            {% set plurFieldCapitalize=keyFields[field]|capitalize %}
+            {% set  singField=field[:-3] %}
+            {% set  singFieldCapitalize=field[:-3]|capitalize %}
+           
+           if (($return['returncontroller'])=='{{ keyFields[field] }}')
+           {
+             $f_id=$return['id'];
+             echo $this->Form->hidden('{{ field }}', array('hiddenField' => true, 'value'=> $f_id));
+           }
+           else
+           {
+
+                                  $myTemplates = ['select' => '   <div class="input-group"><select name="{{'{{'}}name{{'}}'}}"{{'{{'}}attrs{{'}}'}}>{{'{{'}}content{{'}}'}}</select>
+                                                </div>'];
+                echo $this->Form->control('{{ field }}', ['templates' => $myTemplates, 'options' => ${{ keyFields[field] }}, 'id'=> '{{ field }}','empty' => true]);              
+       
+           
+           }
+?>
+<!-- chiamo gli script per aggiungere e selezionare -->
+<!-- lo script Seleziona'nometabella' serve per selezionare quello giusto al click di 'seleziona' nella finestra modale di ricerca' -->
+
+<script>
+     $(document).ready(function () {
+    {%- set isKey = false %}
+    {%- if associations.BelongsTo is defined %}
+    {%- for alias, details in associations.BelongsTo %}
+    {%- if field == details.foreignKey %}
+    {%- set isKey = true %}
+    doAcSelect2('{{ field }}', '{{ plurFieldCapitalize }}' , '{{ details.displayField }}', 3, 'modal{{ pluralVar |capitalize }}');                
+    {%- endif %}
+    {%- endfor %}
+    {%- endif %}  
+    });
+</script>
+
+        
+           
+ <?php          
+           
+        {{- "\n" }}
+       {#%- else %#}
+          //  echo $this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}]);
+            {{- "\n" }}
+        {#%- endif %#}
+    {%- elseif field not in ['created', 'modified', 'updated'] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+            echo $this->Form->control('{{ field }}', ['empty' => true]);
+            {{- "\n" }}
+        {%- else %}
+            echo $this->Form->control('{{ field }}');
+            {{- "\n" }}
+        {%- endif %}
+    {%- endif %}
+{%- endif %}
+{%- endfor %}
+
+        {%- if associations.BelongsToMany %}
+            {%- for assocName, assocData in associations.BelongsToMany %}
+            echo $this->Form->control('{{ assocData.property }}._ids', ['options' => ${{ assocData.variable }}]);
+                {{- "\n" }}
+            {%- endfor %}
+        {% endif %}
+        ?>
+    </fieldset>
+ <?= $this->Form->submit('ok',array(
+    'id'=>'{{ pluralVar }}AddClick',
+    'class' => 'btn btn-lg btn-success',
+    'div' => false));
+  
+  $this->Form->end() ;?>
+</div>
+</div>
+    
+  <script>
+$(document).ready(function () {
+    
+        $('#{{ pluralVar }}AddClick').on('click', Add);
+                });
+</script>    

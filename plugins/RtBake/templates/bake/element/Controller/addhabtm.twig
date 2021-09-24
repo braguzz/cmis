@@ -1,0 +1,27 @@
+{% set belongsTo = Bake.aliasExtractor(modelObj, 'BelongsTo') %}
+{% set belongsToMany = Bake.aliasExtractor(modelObj, 'belongsToMany') %}
+{% set compact = ["'#{singularName}'"] %}
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     */
+    public function addhabtm()
+    {
+        ${{ singularName }} = $this->{{ currentModelName }}->newEmptyEntity();
+        $this->Authorization->authorize(${{ singularName }});
+        $this->autoRender = false; 
+        $return=$this->request->getData();
+        if (empty($return['returnid']))
+        {   $return['id'] = "";
+            $return['returnid'] = "";
+            $return['return'] = "";
+        }
+        $nameTable = $this->getTableLocator()->get($return['return']);
+        $related=$nameTable->findById($return['id'])->firstOrFail();
+        ${{ singularName }} = $this->{{ currentModelName }}->findById($return['returnid'])->firstOrFail();
+        $nameTable->{{ currentModelName }}->link($related,[${{ singularName }}]);
+        return $this->redirect(array('action' => 'view', $return['returnid']));
+      
+    }
+

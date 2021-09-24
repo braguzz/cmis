@@ -1,0 +1,41 @@
+<?php
+/**
+ * @var \{{ namespace }}\View\AppView $this
+ * @var \{{ entityClass }}[]|\Cake\Collection\CollectionInterface ${{ pluralVar }}
+ */
+?>
+<?php
+$output='';
+{% for field in fields %}
+    $output .= '"{{ field }}"' .';';
+{% endfor %}
+ $output.="\n";
+ ?>
+  <?php foreach (${{ pluralVar }} as ${{ singularVar }}) : ?>
+{% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+ {% for field in fields %}
+{% set isKey = false %}
+{% if associations.BelongsTo %}
+{% for alias, details in associations.BelongsTo %}
+{% if field == details.foreignKey %}
+{% set isKey = true %}
+        <?php ${{ singularVar }}->has('{{ details.property }}') ? $output.= '"' .${{ singularVar }}->{{ details.property }}->{{ details.displayField }} .'";' : $output.=';' ?>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if isKey is not same as(true) %}
+{% set columnData = Bake.columnData(field, schema) %}
+{% if columnData.type not in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
+            <?php $output.='"' . h(${{ singularVar }}->{{ field }}).'";'; ?>
+{% else %}
+            <?php $output.=$this->Number->format(${{ singularVar }}->{{ field }}).';';?>
+{% endif %}
+{% endif %}
+{% endfor %}
+<?php 
+ $output.="\n";
+endforeach; 
+header("Content-type: text/csv"); 
+header("Content-Disposition: attachment; filename={{ pluralVar }}.csv");
+echo $output; 
+exit;
