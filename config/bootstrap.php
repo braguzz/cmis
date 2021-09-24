@@ -229,7 +229,6 @@ Inflector::rules('irregular', ['categoria' => 'categorie']);
 Inflector::rules('irregular', ['disco' => 'dischi']);
 Inflector::rules('irregular', ['genere' => 'generi']);
 Inflector::rules('irregular', ['intervento' => 'interventi']);
-Inflector::rules('irregular', ['cronoprogramma' => 'cronoprog']);
 
 require_once(dirname(__FILE__).'/common.php');
 
