@@ -9,6 +9,8 @@ return [ 'regtoscConf'=> [
              'dbPrefix' => '',  //prefix per il DB default - se non c'e' prefisso inserire stringa vuota ''
 
             'logAccess' => FALSE,  //per loggare in http://www321.regione.toscana.it/logrest/Logs
+    
+            'authenticUserPassoword' => TRUE,  //TODO - se messo a FALSE si elimina la possibilita di autenticarsi tramite User e Password
 
             /* =============== MENU PRINCIPALE =========================*/
             /* icone in https://icons.getbootstrap.com/                 */    
