@@ -107,7 +107,7 @@ class RegtoscHandler  extends \Authorization\Middleware\UnauthorizedHandler\Redi
 
             $url .= $query;
         }
-
+if (empty($webroot)) $webroot= MYAPP;
         return $webroot . $a;
     }
 }
