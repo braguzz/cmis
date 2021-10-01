@@ -300,7 +300,7 @@ public function add_ajax_belong()
             $this->autoRender = false;
             return $response->withType( 'application/json' )
                 ->withStringBody( json_encode( $st ) );
-            flush();
+           // flush();
             } 
         
          } else {
@@ -309,7 +309,7 @@ public function add_ajax_belong()
             $this->autoRender = false;
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode( $errors ) );
-            flush();
+           // flush();
         }
 
     }
@@ -404,11 +404,11 @@ public function removeajaxbelong($id = null)
         if ($this->Reports->delete($report)) {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'0', 'id'=> $id]  ) );
-            flush();
+           // flush();
             } else {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'1', 'id'=> $id]  ) );
-            flush();   
+           // flush();   
             }
         }
     }
@@ -513,11 +513,11 @@ $q = $this->Reports
         if ($this->Reports->$modelsource->unlink($report, $q)) {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'0', 'id'=> $id]  ) );
-            flush();
+          //  flush();
             } else {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'1', 'id'=> $id]  ) );
-            flush();   
+          //  flush();   
             }
         }
     }

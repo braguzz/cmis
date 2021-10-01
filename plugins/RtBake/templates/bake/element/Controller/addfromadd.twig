@@ -31,7 +31,7 @@
             $this->autoRender = false;
             return $response->withType( 'application/json' )
                 ->withStringBody( json_encode( $st ) );
-            flush();
+          //  flush();
             } 
         
          } else {
@@ -40,7 +40,7 @@
             $this->autoRender = false;
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode( $errors ) );
-            flush();
+           // flush();
         }
 
     }

@@ -43,11 +43,11 @@ $q = $this->{{ currentModelName }}
         if ($this->{{ currentModelName }}->$modelsource->unlink(${{ singularName }}, $q)) {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'0', 'id'=> $id]  ) );
-            flush();
+            //flush();
             } else {
             return $response->withType( 'application/json' )
                              ->withStringBody( json_encode(  ['error'=>'1', 'id'=> $id]  ) );
-            flush();   
+            //flush();   
             }
         }
     }

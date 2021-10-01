@@ -92,7 +92,7 @@ $response = $this->getResponse();
 $this->autoRender = false;
 return $response->withType( 'application/json' )
     ->withStringBody( json_encode( $results ) );
-            flush();
+         //   flush();
         }
     }
 
@@ -205,7 +205,7 @@ $response = $this->getResponse();
 $this->autoRender = false;
 return $response->withType( 'application/json' )
     ->withStringBody( json_encode( $results ) );
-            flush();
+           // flush();
         }
     }
 
@@ -255,7 +255,7 @@ return $response->withType( 'application/json' )
 $this->autoRender = false;
 return $response->withType( 'application/json' )
     ->withStringBody( json_encode( $results ) );
-            flush();
+          //  flush();
         
         }
     }
