@@ -94,7 +94,7 @@ $this->Html->script('mostraricerca', ['block' => true]);
 
 
 <?php $this->start('rt_actions'); ?>
-<li><?= $this->Html->link(__('New Report'), ['action' => 'add'], ['class' => 'nav-link']) ?></li>
+<ul><li><?= $this->Html->link(__('New Report'), ['action' => 'add'], ['class' => 'nav-link']) ?></li></ul>
 <?php $this->end(); ?>
 <?php $this->assign('rt_sidebar', '<ul class="nav flex-column">' . $this->fetch('rt_actions') . '</ul>'); ?>
 

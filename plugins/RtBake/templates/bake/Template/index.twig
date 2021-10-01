@@ -93,6 +93,7 @@ $this->Html->script('mostraricerca', ['block' => true]);
 
 
 <?php $this->start('rt_actions'); ?>
+<ul>
 {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
 <li><?= $this->Html->link(__('New {{ singularHumanName }}'), ['action' => 'add'], ['class' => 'nav-link']) ?></li>
 {% set done = [] %}
@@ -105,6 +106,7 @@ $this->Html->script('mostraricerca', ['block' => true]);
 {% endif %}
 {% endfor %}
 {% endfor %}
+</ul>
 <?php $this->end(); ?>
 <?php $this->assign('rt_sidebar', '<ul class="nav flex-column">' . $this->fetch('rt_actions') . '</ul>'); ?>
 
