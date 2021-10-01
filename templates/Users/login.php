@@ -27,7 +27,9 @@
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="nav-smartcard-tab" data-toggle="tab" href="#nav-smartcard" role="tab" aria-controls="nav-smartcard" aria-selected="true">SmartCard & Arpa</a>
+                        <?php if ($regtoscConf['authenticUserPassoword']) { ?>
                         <a class="nav-link" id="nav-username-tab" data-toggle="tab" href="#nav-username" role="tab" aria-controls="nav-username" aria-selected="false">Username & Password</a>
+                       <?php } ?>
                         <a class="nav-link d-none" id="nav-spid-tab" data-toggle="tab" href="#nav-spid" role="tab" aria-controls="nav-spid" aria-selected="false">Spid</a>
                     </div>
                 </nav>
