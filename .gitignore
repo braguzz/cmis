@@ -6,6 +6,9 @@
 /tmp/*
 /vendor/*
 
+/bootstrap_u_i/*
+bootstrap_u_i
+
 !logs/.gitkeep 
 !tmp/.gitkeep 
 
