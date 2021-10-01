@@ -1,10 +1,13 @@
 # CakePHP specific files #
 ##########################
-/config/app_local.php
-/config/.env
+#/config/app_local.php
+#/config/.env
 /logs/*
 /tmp/*
-/vendor/*
+#/vendor/*
+
+!logs/.gitkeep 
+!tmp/.gitkeep 
 
 # OS generated files #
 ######################
@@ -41,3 +44,4 @@ nbproject/*
 .vscode
 # Sass preprocessor
 .sass-cache/
+!/vendor/
