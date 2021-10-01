@@ -34,7 +34,7 @@ form .required input {
 }
 
 /*altrimenti il bottone + va a capo Select2*/
-select2-container
+.select2-container
 {
      width: auto!important;
 }
