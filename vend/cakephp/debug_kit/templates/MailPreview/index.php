@@ -60,7 +60,7 @@
     </pre>
     <p><?= __d('debug_kit', 'Now you create a {0} class where you can pass some dummy values.', 'MailPreview') ?></p>
 
-    <pre style="background-color:#f8f8f8;font-familiy:Monaco,sans-serif;overflow:scroll;margin:10px 0;line-height:25px;">
+    <pre style="background-color:#f8f8f8;font-family:Monaco,sans-serif;overflow:scroll;margin:10px 0;line-height:25px;">
     <?php
         $code = '
     <?php
