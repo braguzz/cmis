@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '192fcebb88b36dcb2ec1a4583e4b63c980e4fd33',
+        'reference' => 'd5ec977bfaa5baebb8ba242c9ba1dcbe1d725a70',
         'name' => 'cakephp/app',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '192fcebb88b36dcb2ec1a4583e4b63c980e4fd33',
+            'reference' => 'd5ec977bfaa5baebb8ba242c9ba1dcbe1d725a70',
             'dev_requirement' => false,
         ),
         'cakephp/authentication' => array(
@@ -208,6 +208,12 @@
                 0 => '4.2.9',
             ),
         ),
+        'ceeram/cakepdf' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '4.1.1',
+            ),
+        ),
         'composer/ca-bundle' => array(
             'pretty_version' => '1.2.11',
             'version' => '1.2.11.0',
@@ -305,6 +311,15 @@
             'install_path' => __DIR__ . '/../friendsofcake/bootstrap-ui',
             'aliases' => array(),
             'reference' => '7dcf72868bfab8a0ca8f68d5e291b62f0db845fa',
+            'dev_requirement' => false,
+        ),
+        'friendsofcake/cakepdf' => array(
+            'pretty_version' => '4.1.1',
+            'version' => '4.1.1.0',
+            'type' => 'cakephp-plugin',
+            'install_path' => __DIR__ . '/../friendsofcake/cakepdf',
+            'aliases' => array(),
+            'reference' => '8146a19ad6355869a1c16322c7efbc5ae700ece5',
             'dev_requirement' => false,
         ),
         'friendsofcake/search' => array(
@@ -1050,15 +1065,6 @@
             'aliases' => array(),
             'reference' => 'eaaea4098be1c90c8285543e1356a09c8aa5c8da',
             'dev_requirement' => true,
-        ),
-        'tecnickcom/tcpdf' => array(
-            'pretty_version' => '6.4.2',
-            'version' => '6.4.2.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../tecnickcom/tcpdf',
-            'aliases' => array(),
-            'reference' => '172540dcbfdf8dc983bc2fe78feff48ff7ec1c76',
-            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
