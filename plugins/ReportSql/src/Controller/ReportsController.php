@@ -463,26 +463,7 @@ public function removeajaxbelong($id = null)
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function addhabtm()
-    {
-        $report = $this->Reports->newEmptyEntity();
-        $this->Authorization->authorize($report);
-        $this->autoRender = false; 
-        $return=$this->request->getData();
-        if (empty($return['returnid']))
-        {   $return['id'] = "";
-            $return['returnid'] = "";
-            $return['return'] = "";
-        }
-        $nameTable = $this->getTableLocator()->get($return['return']);
-        $related=$nameTable->findById($return['id'])->firstOrFail();
-        $report = $this->Reports->findById($return['returnid'])->firstOrFail();
-        $nameTable->Reports->link($related,[$report]);
-        return $this->redirect(array('action' => 'view', $return['returnid']));
-      
-    }
-
-
+ 
     /**
      * removehabtmajaxbelong method
      *
