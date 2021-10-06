@@ -687,7 +687,9 @@ class Zebra_Pagination {
         if ($return_output) return $output;
 
         // if script gets this far, print generated content to the screen
-        echo htmlspecialchars($output);
+        ?>
+        <?= $output ?>
+<?php
 
     }
 
