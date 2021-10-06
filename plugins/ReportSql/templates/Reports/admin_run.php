@@ -93,7 +93,7 @@
             </tbody>
         </table>
         </div>
-         <?php $pagination->render(); 
+         <?php echo $pagination->render(); 
          }
          ?>
         </div>
