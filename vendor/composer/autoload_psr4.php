@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'setasign\\Fpdi\\' => array($vendorDir . '/setasign/fpdi/src'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
@@ -48,6 +49,7 @@ return array(
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
     'PHPStan\\PhpDocParser\\' => array($vendorDir . '/phpstan/phpdoc-parser/src'),
     'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
+    'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
     'Migrations\\' => array($vendorDir . '/cakephp/migrations/src'),
     'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
     'M1\\Env\\' => array($vendorDir . '/m1/env/src'),
