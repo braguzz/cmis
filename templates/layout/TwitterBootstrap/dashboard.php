@@ -44,14 +44,9 @@ $this->start('tb_body_start');
            
         
         <div class="row">
-      <!--      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <?= $this->fetch('rb_sidebar') ?>
-                </div>
-            </nav>
-      -->
+    
             <main role="main" class="col-md-12 ml-sm-auto col-lg-12 pt-3 px-4">
-          <!--      <h1 class="page-header"><?= $this->request->getParam('controller'); ?></h1> -->
+
                 
 <?php
 /**
